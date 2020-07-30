@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		WinInet使用详解 | 
+	 
+	Been&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="my markdown blog" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">Been's Blog</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/BeenStone01" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/C++%E4%BB%A3%E7%A0%81%E6%A0%B7%E4%BE%8B/">
+										C++代码样例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/19/GPIB/">
+										GPIB
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Laravel/">
+										Laravel
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/Linux%E5%9C%A8%E7%BA%BF/">
+										Linux在线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC/">
+										MFC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+										MFC多线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%8C%89%E9%92%AE/">
+										MFC自绘按钮
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%A6%82%E8%BF%B0/">
+										MFC自绘概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/SSDP%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/">
+										SSDP开发说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL_vector/">
+										STL_vector
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL/">
+										STL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinHttp%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinHttp使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/04/23/WinInet%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinInet使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Wininte%E6%A0%B7%E4%BE%8B%E8%A7%A3%E6%9E%90/">
+										Wininte样例解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/XML%E4%B9%8BIXMLHTTPReuest/">
+										XML之IXMLHTTPReuest
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E6%93%8D%E4%BD%9C%E4%B9%8BCMarkUp/">
+										XML操作之CMarkUp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E8%A7%A3%E6%9E%90/">
+										XML解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/c++11/">
+										c++11
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/06/c++%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+										c++小程序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/c-%E6%9C%AA%E5%BD%92%E7%B1%BB%E4%BB%A3%E7%A0%81/">
+										c-未归类代码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/hexo/">
+										hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/socket/">
+										socket
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/thread-2/">
+										thread-2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/thread/">
+										thread
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/vue%E7%AC%94%E8%AE%B0/">
+										vue笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/webpack%E4%BD%BF%E7%94%A8/">
+										webpack使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/30/%E4%B8%B2%E5%8F%A3com%E7%BC%96%E7%A8%8B/">
+										串口com编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/03/%E5%88%B7%E9%A2%98%E7%BA%AA%E5%BD%95/">
+										刷题纪录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/">
+										字符类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
+										小程序开发笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4/">
+										常用工具命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/">
+										文件读写
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+										编码格式转换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	WinInet使用详解
+</h1>
+<div class="article-meta">
+	
+	<span>Been Stone</span>
+	<span>2020-04-23 17:08:18</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<p>WinInet是windows平台对socket进行一层封装，用来直接处理http/ftp/Gopher协议的一套windows API。本文只介绍WinInet的http协议部分，关于ftp和Gopher在msdn上搜索WinInet即可找到。</p>
+<h1 id="一、-WinInet使用流程"><a href="#一、-WinInet使用流程" class="headerlink" title="一、 WinInet使用流程"></a>一、 WinInet使用流程</h1><p><img src="https://img-blog.csdn.net/20170519090226055" alt="">    </p>
+<hr>
+<h1 id="二、-初始化"><a href="#二、-初始化" class="headerlink" title="二、 初始化"></a>二、 初始化</h1><p>如图所示：<br> 首先，必须依次调用<code>InternetOpen()、InternetConnect()、InternetOpenRequest()</code>产生三个HINTERNET句柄。       </p>
+<p> 后一个函数的第一个参数都是需要传入前一个函数生成的HINTERNET句柄，这也就是msdn上说的HINTERNET句柄的层级性(HTTP Hierarchy，see：<a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa383766(v=vs.85).aspx)，也就是说InternetConnect()函数第一个参数必须是InternetOpen()函数返回的句柄，而InternetOpenRequest()函数第一个参数必须是InternetConnect()函数返回的句柄。" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/windows/desktop/aa383766(v=vs.85).aspx)，也就是说InternetConnect()函数第一个参数必须是InternetOpen()函数返回的句柄，而InternetOpenRequest()函数第一个参数必须是InternetConnect()函数返回的句柄。</a>        </p>
+<p> 当你不再需要使用这些句柄时，你需要调用InternetCloseHandle()函数关闭这些个HINTERNET句柄， 而关闭顺序和创建相反。   </p>
+<p> ==需要注意的点==<br>msdn上说，在<code>DllMain()</code>函数或者全局对象的构造和析构函数里面调用<code>InternetOpen()、InternetConnect()、InternetOpenRequest()</code>和<code>InternetCloseHandle()</code>是不安全的：    </p>
+<blockquote>
+<p>Like all other aspects of the WinINet API, this function cannot be safely called from within DllMain or the constructors and destructors of global objects. </p>
+</blockquote>
+<h2 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h2><h3 id="1-InternetOpen"><a href="#1-InternetOpen" class="headerlink" title="1. InternetOpen()"></a>1. <a href="https://docs.microsoft.com/zh-cn/windows/win32/api/wininet/nf-wininet-internetopena" target="_blank" rel="noopener">InternetOpen()</a></h3><pre><code class="cpp">HINTERNET InternetOpen(
+  _In_ LPCTSTR lpszAgent,
+  _In_ DWORD   dwAccessType,
+  _In_ LPCTSTR lpszProxyName,
+  _In_ LPCTSTR lpszProxyBypass,
+  _In_ DWORD   dwFlags
+);</code></pre>
+<p>可以在这个函数<code>lpszAgent</code>参数里面设置所谓的<code>UserAgent</code>，常见的浏览器都有所谓的<code>UserAgent</code>，是一个字符串。例： </p>
+<pre><code class="cpp">LPCSTR lpszAgent = _T(&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/77.0.3865.120&quot;);
+hInet = InternetOpen(lpszAgent, INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+if (NULL == hInet)
+{
+    printf(&quot;-1&quot;);
+    return FALSE;
+}
+
+INTERNET_OPEN_TYPE_PRECONFIG_WITH_NO_AUTOPROXY</code></pre>
+<p>另外需要使用代理的http请求，也可以在<code>lpszProxyName</code>设置代理名称和<code>lpszBypass</code>中设置代理ip地址和端口号。当然你需要正确地设置<code>dwAccessType</code>值，我第一次使用时就在这个参数上面吃过亏，导致怎么也连不上http服务器。</p>
+<hr>
+<h3 id="2-InternetConnect"><a href="#2-InternetConnect" class="headerlink" title="2. InternetConnect()"></a>2. <a href="https://docs.microsoft.com/zh-cn/windows/win32/api/wininet/nf-wininet-internetconnecta" target="_blank" rel="noopener">InternetConnect()</a></h3><pre><code class="cpp">InternetConnect(
+    _In_ HINTERNET hInternet,
+    _In_ LPCWSTR lpszServerName,
+    _In_ INTERNET_PORT nServerPort,
+    _In_opt_ LPCWSTR lpszUserName,
+    _In_opt_ LPCWSTR lpszPassword,
+    _In_ DWORD dwService,
+    _In_ DWORD dwFlags,
+    _In_opt_ DWORD_PTR dwContext
+);
+
+hConnect = InternetConnect(hInet, crackedURL.lpszHostName, crackedURL.nPort, NULL, NULL, INTERNET_SERVICE_HTTP, 0, 0);
+
+INTERNET_DEFAULT_HTTP_PORT</code></pre>
+<h3 id="3-HttpOpenRequest"><a href="#3-HttpOpenRequest" class="headerlink" title="3. HttpOpenRequest()"></a>3. <a href="https://docs.microsoft.com/zh-cn/windows/win32/api/wininet/nf-wininet-httpopenrequesta?redirectedfrom=MSDN" target="_blank" rel="noopener">HttpOpenRequest()</a></h3><pre><code class="cpp">HINTERNET HttpOpenRequest( 
+    _In_ HINTERNET hConnect, 
+    _In_ LPCTSTR   lpszVerb, 
+    _In_ LPCTSTR   lpszObjectName,
+    _In_ LPCTSTR   lpszVersion, 
+    _In_ LPCTSTR   lpszReferer, 
+    _In_ LPCTSTR   *lplpszAcceptTypes, 
+    _In_ DWORD     dwFlags, 
+    _In_ DWORD_PTR dwContext
+);     
+
+HINTERNET hHttpRequest = HttpOpenRequest(hHttpSession, _T(&quot;GET&quot;), crackedURL.lpszUrlPath, _T(&quot;HTTP/1.1&quot;), _T(&quot;&quot;), NULL, 0, 0);
+
+HttpOpenRequest(hConnect, &quot;GET&quot;, strOther.c_str(), (&quot;HTTP/1.1&quot;), NULL, (LPCSTR*)&quot;*/*&quot;, INTERNET_FLAG_DONT_CACHE, 1);
+
+HttpOpenRequestA(hConnect &quot;POST&quot;, strObject, (&quot;HTTP/1.1&quot;), NULL, (LPCSTR*)&quot;*/*&quot;, INTERNET_FLAG_NO_CACHE_WRITE, 0);
+
+HINTERNET hRequest = HttpOpenRequest(hSession, _T(&quot;GET&quot;), _T(&quot;/?spm=a2hww.20027244.m_251424.5~1~3~8!2~A&quot;), NULL, NULL, 0, HTTP_ADDREQ_FLAG_ADD | INTERNET_FLAG_KEEP_CONNECTION | INTERNET_FLAG_NO_AUTO_REDIRECT | INTERNET_FLAG_NO_CACHE_WRITE | INTERNET_FLAG_NO_COOKIES, 0);
+</code></pre>
+<h4 id="参数说明："><a href="#参数说明：" class="headerlink" title="参数说明："></a>参数说明：</h4><h5 id="①-hConnect"><a href="#①-hConnect" class="headerlink" title="①. hConnect"></a>①. hConnect</h5><h5 id="③-lpszObjectName"><a href="#③-lpszObjectName" class="headerlink" title="③. lpszObjectName"></a>③. lpszObjectName</h5><h5 id="④-lpszVersion"><a href="#④-lpszVersion" class="headerlink" title="④. lpszVersion"></a>④. lpszVersion</h5><p><font size=2> 目前支持的版本号有<code>http 1.0</code>和<code>http 1.1</code>，如果这个参数设置为<code>NULL</code>，则根据IE浏览器里面设置的http版本号来填充值。</font></p>
+<h5 id="⑤-lpszReferer"><a href="#⑤-lpszReferer" class="headerlink" title="⑤. lpszReferer"></a>⑤. lpszReferer</h5><p><del>对应HTTP头部分请求部分Referer，通常情况下为空。</del></p>
+<h5 id="⑥-lplpszAcceptTypes"><a href="#⑥-lplpszAcceptTypes" class="headerlink" title="⑥. *lplpszAcceptTypes"></a>⑥. *lplpszAcceptTypes</h5><p><font size=2> <em>/</em>表示任何类型，type/* 表示该类型下的所有子类型 </font></p>
+<h5 id="⑦-dwFlags"><a href="#⑦-dwFlags" class="headerlink" title="⑦. dwFlags"></a>⑦. dwFlags</h5><h5 id="⑧-dwContext"><a href="#⑧-dwContext" class="headerlink" title="⑧. dwContext"></a>⑧. dwContext</h5><h5 id="②-lpszVerb"><a href="#②-lpszVerb" class="headerlink" title="②. lpszVerb"></a>②. lpszVerb</h5><p>http的数据请求方式一般有get和post方法。<br>如果是get方法，那么lpszVerb=_T(“GET”)，如果是post方法，则 lpszVerb=_T(“POST”)或者lpszVerb=_T(“PUT”)。get方法一般是网址后面加问号跟上变量和变量值，变量与变量之间用&amp;符号分割，例如：<br><a href="http://www.baidu.com/index.php?var1=value1&amp;var2=value2&amp;var3=value3&amp;var4=value4" target="_blank" rel="noopener">http://www.baidu.com/index.php?var1=value1&amp;var2=value2&amp;var3=value3&amp;var4=value4</a><br>浏览器一般对网址长度有限制，因此get方法也有长度限制，且get方法是明文的（在网址中可直接看到），所有另外一个方法是post，post是加密的，大多数浏览器中的表单会使用这种方法，如何设置post的数据呢？<font face="黑体" color=#0000ff size="3">有两种方法:</font></p>
+<hr>
+<h1 id="三、网络通信"><a href="#三、网络通信" class="headerlink" title="三、网络通信"></a>三、网络通信</h1><p>当我们做好以上的初始化工作以后，我们可以调用相关的数据获取函数去获取http请求的结果了。</p>
+<h3 id="4-HttpAddRequestHeaders"><a href="#4-HttpAddRequestHeaders" class="headerlink" title="4. HttpAddRequestHeaders()"></a>4. <a href="https://docs.microsoft.com/zh-cn/windows/win32/api/wininet/nf-wininet-httpaddrequestheadersa" target="_blank" rel="noopener">HttpAddRequestHeaders()</a></h3><pre><code class="cpp">BOOL HttpAddRequestHeaders(
+    _In_ HINTERNET hRequest,
+    _When_(dwHeadersLength == (DWORD)-1, _In_z_)
+    _When_(dwHeadersLength != (DWORD)-1, _In_reads_(dwHeadersLength))
+    LPCSTR lpszHeaders,
+    _In_ DWORD dwHeadersLength,
+    _In_ DWORD dwModifiers
+);
+
+TCHAR sType[] = &quot;Content-Type:text/xml; charset=\&quot;utf-8\&quot;&quot;;
+HttpAddRequestHeaders(hRequest, sType, (DWORD)sizeof(sType), HTTP_ADDREQ_FLAG_REPLACE | HTTP_ADDREQ_FLAG_ADD);
+TCHAR sSetURL[] = &quot;SOAPAction:\&quot;urn:schemas-upnp-org:service:AVTransport:1#SetAVTransportURI\&quot;&quot;;
+TCHAR sPlay[] = &quot;SOAPAction:\&quot;urn:schemas-upnp-org:service:AVTransport:1#Play\&quot;&quot;;
+TCHAR sPause[] = &quot;SOAPAction:\&quot;urn:schemas-upnp-org:service:AVTransport:1#Pause\&quot;&quot;;
+HttpAddRequestHeaders(hRequest, sPlay, (DWORD)sizeof(sPlay), HTTP_ADDREQ_FLAG_ADD);
+
+HttpAddRequestHeaders(hRequest, _T(&quot;Accept-Encoding: gzip&quot;), -1, HTTP_ADDREQ_FLAG_REPLACE);
+
+if(bIsKeepAlive == TRUE)
+{
+    LPCSTR header = &quot;Connection: keep-alive/r/n&quot;;
+    SIZE_T len = strlen(header);
+    HttpAddRequestHeadersA(hOpenRequest, header, len, NULL);
+}</code></pre>
+<h4 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h4><p>添加一个HTTP的请求头域。</p>
+<h4 id="参数说明：-1"><a href="#参数说明：-1" class="headerlink" title="参数说明："></a>参数说明：</h4><h5 id="①-hRequest"><a href="#①-hRequest" class="headerlink" title="①. hRequest"></a>①. hRequest</h5><h5 id="②-lpszHeaders"><a href="#②-lpszHeaders" class="headerlink" title="②. lpszHeaders"></a>②. lpszHeaders</h5><p><del>请求头域的字符串，（多个头域时）每个头域以(\r\n)结束)。</del></p>
+<h5 id="③-dwHeadersLength"><a href="#③-dwHeadersLength" class="headerlink" title="③. dwHeadersLength"></a>③. dwHeadersLength</h5><p><del>无符号长整形变量，指向lpszHeaders的长度，如果该参数为-1，自动以”/0”结束来计算lpszHeaders的长度。</del></p>
+<h5 id="④-dwModifiers"><a href="#④-dwModifiers" class="headerlink" title="④. dwModifiers"></a>④. dwModifiers</h5><p>头域的修改模式：<br>HTTP_ADDREQ_FLAG_ADD<br><del>添加一个头域，如果头域已存在，将进行覆盖，与HTTP_ADDREQ_FLAG_REPLACEH一起使用。</del><br>HTTP_ADDREQ_FLAG_ADD_IF_NEW<br><del>添加一个头域，如果该头域存在则返回一个错误</del><br>HTTP_ADDREQ_FLAG_COALESCE_WITH_COMMA<br><del>合并同名的头域，值使用逗号隔开</del><br>HTTP_ADDREQ_FLAG_COALESCE_WITH_SEMICOLON<br><del>合并同名的头域，值使用分号隔开</del><br>HTTP_ADDREQ_FLAG_REPLACE<br><del>替换或删除一个头域，如果值为空，则删除，否则替换</del></p>
+<p>HTTP_ADDREQ_FLAG_COALESCE<br>HTTP_ADDREQ_INDEX_MASK<br>HTTP_ADDREQ_FLAGS_MASK    </p>
+<h3 id="5-HttpSendRequest"><a href="#5-HttpSendRequest" class="headerlink" title="5. HttpSendRequest()"></a>5. <a href="https://docs.microsoft.com/zh-cn/windows/win32/api/wininet/nf-wininet-httpsendrequesta" target="_blank" rel="noopener">HttpSendRequest()</a></h3><p>方法一，调用<code>HttpSendRequest()</code>函数或者<code>HttpSendRequestEx()</code>。  </p>
+<pre><code class="cpp">BOOL HttpSendRequest( 
+    _In_ HINTERNET hRequest,
+    _In_ LPCTSTR   lpszHeaders,
+    _In_ DWORD     dwHeadersLength,
+    _In_ LPVOID    lpOptional,
+    _In_ DWORD     dwOptionalLength
+); 
+
+
+if(strPost.empty()
+{
+    bRequest = HttpSendRequest(hOpenRequest, NULL, 0, NULL, 0);
+}
+else
+{
+    DWORD dwSize = (strPost.empty())?0:strlen(strPost.c_str());
+    bRequest = HttpSendRequest(hOpenRequest, NULL, 0, (LPVOID)strPost.c_str(), dwSize);
+}
+
+//
+char hdrs[] = &quot;Content-Type: application/x-www-form-urlencoded&quot;;
+char options[] = &quot;&quot;;
+bRequest = HttpSendRequestA(hOpenRequest, hdrs, (DWORD)strlen(hdrs), options, (DWORD)strlen(options));</code></pre>
+<h4 id="①-hRequest-1"><a href="#①-hRequest-1" class="headerlink" title="①. hRequest"></a>①. hRequest</h4><h4 id="②-lpszHeader"><a href="#②-lpszHeader" class="headerlink" title="②. lpszHeader"></a>②. lpszHeader</h4><h4 id="③-dwHeadersLength-1"><a href="#③-dwHeadersLength-1" class="headerlink" title="③. dwHeadersLength"></a>③. dwHeadersLength</h4><h4 id="④-lpOptional"><a href="#④-lpOptional" class="headerlink" title="④. lpOptional"></a>④. lpOptional</h4><p><del>指向的就是需要发送的数据缓冲区</del></p>
+<h4 id="⑤-dwOptionalLength"><a href="#⑤-dwOptionalLength" class="headerlink" title="⑤. dwOptionalLength"></a>⑤. dwOptionalLength</h4><p><del>发送数据的长度。</del><br>错误代码12029原因？？？？</p>
+<hr>
+<h3 id="6-HttpSendRequestEx"><a href="#6-HttpSendRequestEx" class="headerlink" title="6. HttpSendRequestEx()"></a>6. HttpSendRequestEx()</h3><p>同理对于加强版的HttpSendRequestEx()则在     </p>
+<pre><code class="cpp">BOOL HttpSendRequestEx( 
+    _In_  HINTERNET             hRequest,
+    _In_  LPINTERNET_BUFFERS    lpBuffersIn,
+    _Out_ LPINTERNET_BUFFERS    lpBuffersOut,
+    _In_  DWORD                 dwFlags,
+    _In_  DWORD_PTR             dwContext
+);</code></pre>
+<p>第二个参数lpBufferIn的<code>lpvBuffer</code>和<code>dwBufferLength</code>中设置，一个是缓冲区指针，一个是缓冲区长度。</p>
+<pre><code class="cpp">typedef struct _INTERNET_BUFFERS 
+{  
+    DWORD               dwStructSize;  
+    _INTERNET_BUFFERS   *Next;  
+    LPCTSTR             lpcszHeader; 
+    DWORD               dwHeadersLength; 
+    DWORD               dwHeadersTotal;  
+    LPVOID              lpvBuffer;  
+    DWORD               dwBufferLength;
+    DWORD               dwBufferTotal; 
+    DWORD               dwOffsetLow; 
+    DWORD               dwOffsetHigh;
+} INTERNET_BUFFERS, * LPINTERNET_BUFFERS; </code></pre>
+<hr>
+<p>方法二是：调用<code>InternetWriteFile()</code>函数，当然这个函数也需要借助<code>HttpSendRequestEx()</code>，具体参见msdn。    </p>
+<p>在调用<code>HttpSendRequest(Ex)()</code>函数之前，你也可以调用<code>HttpAddRequestHeaders()</code>追加一些需要一起发送的http头信息。<br>示例：<a href="http://www.hootina.org/index.php?preview=1" target="_blank" rel="noopener">http://www.hootina.org/index.php?preview=1</a>    </p>
+<pre><code class="cpp">HINTERNET hInternet = InternetOpen(&quot;Microsoft Internet Explorer&quot;, INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+HINTERNET hConnect = InternetConnect(hInternet, &quot;www.hootina.org&quot;, 80, NULL, NULL, INTERNET_SERVICE_HTTP, 0, 0);
+HINTERNET hHttpRequest = HttpOpenRequest(hHttpSession, &quot;GET&quot;, &quot;/index.php?preview=1&quot;, _T(&quot;HTTP/1.1&quot;), &quot;&quot;, NULL, 0, 0);</code></pre>
+<p><del>注意：如果网址中有www，则网址前面不能加http://，反之如果没有www，则一定要带上http://,否则会解析失败。</del>   </p>
+<p><a href="http://192.168.1.77:49152/TxMediaRenderer_desc.xml" target="_blank" rel="noopener">http://192.168.1.77:49152/TxMediaRenderer_desc.xml</a> 不需要加http:// </p>
+<hr>
+<h3 id="7-HttpQueryInfo"><a href="#7-HttpQueryInfo" class="headerlink" title="7. HttpQueryInfo()"></a>7. <a href="https://docs.microsoft.com/en-us/windows/win32/api/wininet/nf-wininet-httpqueryinfoa" target="_blank" rel="noopener">HttpQueryInfo()</a></h3><p>当我们调用<code>HttpSendRequest()</code>之后我们可以调用<code>HttpQueryInfo()</code>查询相关的http协议，比如http的状态码，比如404，502等：    </p>
+<pre><code class="cpp">//查询http状态码（这一步非必须），但是HttpSendRequest()必须要调用
+    DWORD dwRetCode = 0;
+    DWORD dwSizeOfRq = sizeof(DWORD);
+    if (!HttpSendRequest(hRequestGet, NULL, 0, NULL, 0) || !HttpQueryInfo(hRequestGet, HTTP_QUERY_STATUS_CODE | HTTP_QUERY_FLAG_NUMBER, &amp;dwRetCode, &amp;dwSizeOfRq, NULL) || dwRetCode &gt;= 400)
+    {
+        InternetCloseHandle(hRequestGet);
+        InternetCloseHandle(hConnect);
+        InternetCloseHandle(hInet);
+        printf(&quot;-4&quot;);
+        return FALSE;
+    }</code></pre>
+<p>也可以调用<code>InternetQueryDataAvailable()</code>查询返回的数据大小或者使用<code>InternetReadFile()</code>直接读取数据。<br><a href="https://docs.microsoft.com/zh-cn/windows/win32/wininet/retrieving-http-headers" target="_blank" rel="noopener">Retrieving HTTP Headers</a>(应用代码样例)</p>
+<h3 id="8-InternetReadFile"><a href="#8-InternetReadFile" class="headerlink" title="8. InternetReadFile()"></a>8. InternetReadFile()</h3><pre><code class="cpp">char szBuffer[1024] = {0};
+DWORD dwByteRead = 0;
+while(InternetReadFile(hOpenRequest, szBuffer, sizeof(szBuffer), &amp;dwByteRead) &amp;&amp; dwByteRead &gt; 0)
+{
+    if(bIsShow == TRUE)
+    {
+        cout&lt;&lt;szBuffer&lt;&lt;endl;
+        ZeroMemory(szBuffer,dwByteRead);
+    }
+}</code></pre>
+<h3 id="9-InternetOpenUrl"><a href="#9-InternetOpenUrl" class="headerlink" title="9. InternetOpenUrl"></a>9. <a href="https://docs.microsoft.com/zh-cn/windows/win32/api/wininet/nf-wininet-internetopenurla" target="_blank" rel="noopener">InternetOpenUrl</a></h3><pre><code class="cpp">void InternetOpenUrlA(
+  HINTERNET hInternet,
+  LPCSTR    lpszUrl,
+  LPCSTR    lpszHeaders,
+  DWORD     dwHeadersLength,
+  DWORD     dwFlags,
+  DWORD_PTR dwContext
+);</code></pre>
+<h4 id="作用：-1"><a href="#作用：-1" class="headerlink" title="作用："></a>作用：</h4><p>Opens a resource specified by a complete FTP or HTTP URL.<br><font color=red>需要注意的是：</font>你可以调用<code>HttpOpen()</code>一次，然后利用返回的句柄，调用<code>HttpConnect()</code>和<code>HttpOpenRequest()</code>等函数多次，这样你可以建立多个http连接，进行多个http请求，当然关闭这些句柄时都要一个个地关闭干净。</p>
+<ol start="3">
+<li>另外和这些相关的比较有用的函数有：InternetSetOptionEx(),你可以使用它设置http的一些选项，比如代理用户名和密码：<pre><code class="cpp">InternetSetOptionEx(m_hInternet, INTERNET_OPTION_PROXY_USERNAME, (LPVOID)m_strUser.c_str(), m_strUser.size() + 1, 0);
+::InternetSetOptionEx(m_hInternet, INTERNET_OPTION_PROXY_PASSWORD, (LPVOID)m_strPwd.c_str(), m_strPwd.size() + 1, 0);</code></pre>
+也可以使用InternetSetStatusCallback()来设置http状态码发生变化时的回调函数： <pre><code class="cpp">INTERNET_STATUS_CALLBACK lpCallBackFunc;
+lpCallBackFunc = ::InternetSetStatusCallback(m_hInternet, (INTERNET_STATUS_CALLBACK)&amp;StatusCallback); </code></pre>
+</li>
+<li>有时候明明http服务器上的信息已经更新，但发送http请求还是得到原来的数据，这是由于http缓存的问题，禁用缓存可以将<pre><code class="cpp">m_hHttpRequest = ::HttpOpenRequest(m_hHttpSession, _T(&quot;GET&quot;), crackedURL.lpszUrlPath, NULL, _T(&quot;&quot;), NULL, 0, 0);</code></pre>
+改成<pre><code class="cpp">m_hHttpRequest = ::HttpOpenRequest(m_hHttpSession, _T(&quot;GET&quot;), crackedURL.lpszUrlPath, NULL, _T(&quot;&quot;), NULL, INTERNET_FLAG_NO_CACHE_WRITE, 0);</code></pre>
+</li>
+<li>最后一点，因为WinInet系列函数不包含在windows.h这个头文件中，你需要在你的工程include单独的wininet.h，和引用wininet.lib。  <pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;Windows.h&gt;
+#include &lt;wininet.h&gt;
+</code></pre>
+</li>
+</ol>
+<p>#pragma comment(lib, “wininet.lib”)</p>
+<p>#define URL_STRING_TEST _T(“<a href="http://www.hootina.org/index.php&quot;" target="_blank" rel="noopener">http://www.hootina.org/index.php&quot;</a>)</p>
+<p>int main()<br>{<br>    /**<br>     *   解析网址为主机、端口和目标页面<br>     */</p>
+<pre><code>TCHAR szHostName[128];
+TCHAR szUrlPath[256];
+URL_COMPONENTS crackedURL = { 0 };
+crackedURL.dwStructSize = sizeof (URL_COMPONENTS);
+crackedURL.lpszHostName = szHostName;
+crackedURL.dwHostNameLength = ARRAYSIZE(szHostName);
+crackedURL.lpszUrlPath = szUrlPath;
+crackedURL.dwUrlPathLength = ARRAYSIZE(szUrlPath);
+InternetCrackUrl(URL_STRING_TEST, (DWORD)_tcslen(URL_STRING_TEST), 0, &amp;crackedURL);
+
+/**
+ *   http请求相关初始化工作
+ */
+HINTERNET hInternet = InternetOpen(_T(&quot;Microsoft InternetExplorer&quot;), INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+if (hInternet == NULL)
+    return -1;
+
+HINTERNET hHttpSession = InternetConnect(hInternet, crackedURL.lpszHostName, crackedURL.nPort, NULL, NULL, INTERNET_SERVICE_HTTP, 0, 0);
+if (hHttpSession == NULL)
+{
+    InternetCloseHandle(hInternet);
+    return -2;
+}
+
+HINTERNET hHttpRequest = HttpOpenRequest(hHttpSession, _T(&quot;GET&quot;), crackedURL.lpszUrlPath, NULL, _T(&quot;&quot;), NULL, 0, 0);
+if (hHttpRequest == NULL)
+{
+    InternetCloseHandle(hHttpSession);
+    InternetCloseHandle(hInternet);
+    return -3;
+}
+
+/**
+ * 查询http状态码（这一步不是必须的）,但是HttpSendRequest()必须要调用
+ */
+
+DWORD dwRetCode = 0;
+DWORD dwSizeOfRq = sizeof(DWORD);
+if (!HttpSendRequest(hHttpRequest, NULL, 0, NULL, 0) ||
+    !HttpQueryInfo(hHttpRequest, HTTP_QUERY_STATUS_CODE | HTTP_QUERY_FLAG_NUMBER, &amp;dwRetCode, &amp;dwSizeOfRq, NULL)
+    || dwRetCode &gt;= 400)
+{
+    InternetCloseHandle(hHttpRequest);
+    InternetCloseHandle(hHttpSession);
+    InternetCloseHandle(hInternet);
+
+    return -4;
+}
+
+/**
+*  查询文件大小
+*/
+DWORD dwContentLen;
+//这个地方有错误，参见后面分析！ 
+if (!InternetQueryDataAvailable(hHttpRequest, &amp;dwContentLen, 0, 0) || dwContentLen == 0)
+{
+    InternetCloseHandle(hHttpRequest);
+    InternetCloseHandle(hHttpSession);
+    InternetCloseHandle(hInternet);
+    return -6;
+}
+
+FILE* file = fopen(&quot;index.php&quot;, &quot;wb+&quot;);
+if (file == NULL)
+{
+    InternetCloseHandle(hHttpRequest);
+    InternetCloseHandle(hHttpSession);
+    InternetCloseHandle(hInternet);
+
+    return -7;
+}
+
+
+
+DWORD dwError;
+DWORD dwBytesRead;
+DWORD nCurrentBytes = 0;
+char szBuffer[1024] = { 0 };
+while (TRUE)
+{
+    //开始读取文件
+    if (InternetReadFile(hHttpRequest, szBuffer, sizeof(szBuffer), &amp;dwBytesRead))
+    {
+        if (dwBytesRead == 0)
+        {
+            break;
+        }
+
+        nCurrentBytes += dwBytesRead;
+        fwrite(szBuffer, 1, dwBytesRead, file);
+    }
+    else
+    {
+        dwError = GetLastError();
+        break;
+    }
+}
+
+
+
+fclose(file);
+InternetCloseHandle(hInternet);
+InternetCloseHandle(hHttpSession);
+InternetCloseHandle(hHttpRequest);
+
+
+//这个地方有错误，参见后面分析！ 
+if (dwContentLen != nCurrentBytes)
+    return -8;
+
+return 0;</code></pre><p>}</p>
+<pre><code>上面的代码存在一个问题：
+注意：上面下载index.php隐藏着一个错误，这也是新手常犯的错误：   
+
+程序中先用`InternetQueryDataAvailable()`函数查询返回的字节数，然后再利用InternetReadFile()读取字节数，如果 `InternetReadFile()`读取的总字节数和`InternetQueryDataAvailable()`查询到的字节数不相等，则认为出错。这种思路是不正确的。问题就在于`InternetQueryDataAvailable()`，首先http请求返回的是字节流，假如一个请求先返回30个字节，后再收到70个字节，那么当返回30个字节的时候正好调用了`InternetQueryDataAvailable()`得到的值也就是30。   
+
+而接下来调用`InternetReadFile()`实际却读到了100个字节。这个时候因为二者不相等，所以程序就认为出错了。这也就是msdn上说的：
+&gt;The amount of data remaining will not be recalculated until all available data indicated by the call to InternetQueryDataAvailable is read.（除非你调用`InternetReadFile()`后再次调用`InternetQueryDataAvailable()`才能重新计算可用的数据大小）    
+
+   正确的做法是调用`HttpQueryInfo()`去查询http请求返回的头部中的`content-length`字段去确定可以读取的字节数，代码：
+```cpp
+WCHAR buf[64] = { 0 };    
+DWORD dwSizeOfReq = sizeof(buf);    
+DWORD dwContLen = 0;
+//需要注意的是，如果适用HttpQueryInfoW，那么buf必须也是宽字符版本，
+//虽然HttpQueryInfo()之前只是一个缓冲区，因为如果不使用宽字符，
+//buf得到的字节数可能会因为\0的原因被截断。    
+if (HttpQueryInfo(m_hHttpRequest, HTTP_QUERY_CONTENT_LENGTH, buf, &amp;dwSizeOfReq, NULL))
+{
+    //dwContLen = _wtol(buf);   
+    Wchar_t* pEnd; 
+    dwContLen = wcstol(buf,&amp;pEnd,10);
+}
+else        
+     return false;</code></pre><p>然后再比较实际读到的字节数和查询的字节数是否一致：</p>
+<pre><code class="cpp">if (dwBytesGet != dwContLen)        
+    return false;</code></pre>
+<p>或者在知道http请求一定会返回结果的情况，直接调用InternetReadFile()函数去接收数据，省略先查询收到的字节长度的步骤。<br>另外这里，我提供一个对上述API封装的版本，功能更强大:<br>cdsn下载地址：<a href="http://download.csdn.net/detail/analogous_love/9846450" target="_blank" rel="noopener">http://download.csdn.net/detail/analogous_love/9846450</a><br>github下载地址：<a href="https://github.com/baloonwj/HttpClientLib" target="_blank" rel="noopener">https://github.com/baloonwj/HttpClientLib</a>   </p>
+<p>原文地址：<a href="https://blog.csdn.net/analogous_love/article/details/72515002" target="_blank" rel="noopener">https://blog.csdn.net/analogous_love/article/details/72515002</a></p>
+<h1 id="三、参考文献"><a href="#三、参考文献" class="headerlink" title="三、参考文献"></a>三、参考文献</h1><p><a href="https://docs.microsoft.com/zh-cn/windows/win32/wininet/wininet-functions" target="_blank" rel="noopener">WinINet Functions</a></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/23/WinHttp%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  WinHttp使用详解
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/23/XML%E6%93%8D%E4%BD%9C%E4%B9%8BCMarkUp/">
+                XML操作之CMarkUp
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Been Stone</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

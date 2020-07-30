@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		thread(2) | 
+	 
+	Been&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="my markdown blog" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">Been's Blog</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/BeenStone01" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/C++%E4%BB%A3%E7%A0%81%E6%A0%B7%E4%BE%8B/">
+										C++代码样例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/19/GPIB/">
+										GPIB
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Laravel/">
+										Laravel
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/Linux%E5%9C%A8%E7%BA%BF/">
+										Linux在线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC/">
+										MFC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+										MFC多线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%8C%89%E9%92%AE/">
+										MFC自绘按钮
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%A6%82%E8%BF%B0/">
+										MFC自绘概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/SSDP%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/">
+										SSDP开发说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL_vector/">
+										STL_vector
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL/">
+										STL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinHttp%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinHttp使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinInet%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinInet使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Wininte%E6%A0%B7%E4%BE%8B%E8%A7%A3%E6%9E%90/">
+										Wininte样例解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/XML%E4%B9%8BIXMLHTTPReuest/">
+										XML之IXMLHTTPReuest
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E6%93%8D%E4%BD%9C%E4%B9%8BCMarkUp/">
+										XML操作之CMarkUp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E8%A7%A3%E6%9E%90/">
+										XML解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/c++11/">
+										c++11
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/06/c++%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+										c++小程序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/c-%E6%9C%AA%E5%BD%92%E7%B1%BB%E4%BB%A3%E7%A0%81/">
+										c-未归类代码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/hexo/">
+										hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/socket/">
+										socket
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/04/24/thread-2/">
+										thread-2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/thread/">
+										thread
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/vue%E7%AC%94%E8%AE%B0/">
+										vue笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/webpack%E4%BD%BF%E7%94%A8/">
+										webpack使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/30/%E4%B8%B2%E5%8F%A3com%E7%BC%96%E7%A8%8B/">
+										串口com编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/03/%E5%88%B7%E9%A2%98%E7%BA%AA%E5%BD%95/">
+										刷题纪录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/">
+										字符类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
+										小程序开发笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4/">
+										常用工具命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/">
+										文件读写
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+										编码格式转换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	thread-2
+</h1>
+<div class="article-meta">
+	
+	<span>Been Stone</span>
+	<span>2020-04-24 16:01:02</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h1><p>线程同步是指线程间需要按照与帝国的先后次序顺序进行的行为。</p>
+<h2 id="条件变量condition-variable"><a href="#条件变量condition-variable" class="headerlink" title="条件变量condition_variable"></a><a href="https://www.jianshu.com/p/a31d4fb5594f" target="_blank" rel="noopener">条件变量condition_variable</a></h2><p><a href="https://blog.csdn.net/lv0918_qian/article/details/81745723" target="_blank" rel="noopener">参考2</a></p>
+<pre><code class="cpp">//交替输出
+#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;Windows.h&gt;
+
+using namespace std;
+
+std::mutex mtx_syn;
+std::condition_variable cv_syn;
+std::condition_variable cv_syn_1;
+bool ready = false;
+
+void threadA(int id) {
+    while (1)
+    {
+        std::unique_lock&lt;std::mutex&gt; lck(mtx_syn);
+        while (!ready) cv_syn.wait(lck);
+        // ...
+        std::cout &lt;&lt; &quot;thread &quot; &lt;&lt; id &lt;&lt; &#39;\n&#39;;
+        Sleep(500);
+        cv_syn.notify_all();   //cpu 轮询执行 所有被唤醒的线程。
+        cv_syn.wait(lck);
+    }
+
+}
+
+void threadB(int id) {
+    while (1)
+    {
+        //新创建的 unique_lock 对象管理 Mutex 对象 m，并尝试调用 m.lock() 对 Mutex 对象进行上锁，如果此时另外某个 unique_lock 对象已经管理了该 Mutex 对象 m，则当前线程将会被阻塞
+        std::unique_lock&lt;std::mutex&gt; lck(mtx_syn);
+        while (!ready) cv_syn.wait(lck);
+        // ...
+        std::cout &lt;&lt; &quot;thread &quot; &lt;&lt; id &lt;&lt; &#39;\n&#39;;
+        Sleep(500);
+        cv_syn.notify_all();
+        cv_syn.wait(lck);
+    }
+}
+
+void threadC(int id) {
+    while (1)
+    {
+        std::unique_lock&lt;std::mutex&gt; lck(mtx_syn);
+        while (!ready) cv_syn_1.wait(lck);
+        // ...
+        std::cout &lt;&lt; &quot;thread &quot; &lt;&lt; id &lt;&lt; &#39;\n&#39;;
+        Sleep(500);
+        cv_syn_1.notify_all();
+        cv_syn_1.wait(lck);
+    }
+}
+
+void go()
+{
+    std::unique_lock&lt;std::mutex&gt; lck(mtx_syn);
+    ready = true;
+    cv_syn.notify_one();
+}
+
+int main()
+{
+    //线程同步
+    thread threads[5];
+    // spawn 10 threads:
+    //for (int i = 0; i&lt;5; ++i)
+    //    threads[i] = std::thread(print_id, i);
+
+    threads[0] = std::thread(threadA, 0);
+    threads[1] = std::thread(threadB, 1);
+    threads[2] = std::thread(threadC, 2);  //该线程 与 0， 1 无关，不影响 0，1 线程的同步，因为用的不是一个 condition_variable
+    std::cout &lt;&lt; &quot;2 threads ready to race...\n&quot;;
+    go();                       // go!
+
+    for (auto&amp; th : threads) th.join();
+
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<h3 id="成员函数"><a href="#成员函数" class="headerlink" title="成员函数"></a>成员函数</h3><pre><code class="cpp">void wait(unique_lock&lt;mutex&gt;&amp; _Lck)
+void wait(unique_lock&lt;mutex&gt;&amp; _Lck, _Predicate _Pred) </code></pre>
+<h4 id="1-wait"><a href="#1-wait" class="headerlink" title="1. wait()"></a>1. wait()</h4><p>当前线程调用wait()后将被阻塞(此时当前线程应该已经获得了锁)，直到另外某个线程调用notify_*唤醒了当前线程。</p>
+<p>在线程被阻塞时，该函数会自动调用lck.unlock()释放锁，使得其他被阻塞的锁竞争上的线程得以继续执行。</p>
+<p>一旦当前线程获得通知(notified唤醒)，wait()函数也是自动调用lock函数，使得lck的状态和wait函数调用时相同。</p>
+<p>在第二种情况下，只有当pred条件为false时，调用wait()才会阻塞当前线程，并且在收到其他线程的通知后，只有为true时才会解除阻塞。</p>
+<pre><code class="cpp">while(!pred()) wait(lck);</code></pre>
+<pre><code class="cpp">cv_status wait_for(unique_lock&lt;mutex&gt;&amp; _Lck, const chrono::duration&lt;_Rep, _Period&gt;&amp; _Rel_time)
+
+bool wait_for(unique_lock&lt;mutex&gt;&amp; _Lck, const chrono::duration&lt;_Rep, _Period&gt;&amp; _Rel_time, _Predicate _Pred)</code></pre>
+<h4 id="2-wait-for"><a href="#2-wait-for" class="headerlink" title="2. wait_for()"></a>2. wait_for()</h4><p>wait_for()可以指定一个时间段，在当前线程收到通知或者指定的时间rel_time超时前，该线程都会处于阻塞状态。而一旦超时或者收到了其他线程的通知，wait_for()返回，剩下的处理步骤和wait()类似。</p>
+<p>另外，wait_for的重载版本的最后一个参数pred表示wait_for的预测条件，只有当pred条件为false时调用wait才会阻塞当前线程，并且在收到其他线程的通知后只有当pred为true时才会被解除阻塞。</p>
+<pre><code class="cpp">return wait_until(lck, chrono::steady_clock::now()+rel_tiem,move(pred));</code></pre>
+<p>示例: 限时输入</p>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;chrono&gt;
+#include &lt;condition_variable&gt;
+
+using namespace std;
+
+condition_variable cv;
+
+int value;
+
+void do_read_value()
+{
+    cin &gt;&gt; value;
+    cv.notify_one();
+}
+
+int main()
+{
+    cout &lt;&lt; &quot;Please, enter an integer(I&#39;ll be printing dots):&quot; &lt;&lt; endl;
+    thread th(do_read_value);
+
+    mutex mtx;
+    unique_lock&lt;mutex&gt; lck(mtx);
+    while (cv.wait_for(lck,chrono::seconds(5))==cv_status::timeout)
+    {
+        cout &lt;&lt; &#39;.&#39;;
+        cout.flush();
+    }
+
+    cout &lt;&lt; &quot;You entered:&quot; &lt;&lt; value &lt;&lt; endl;
+    th.join();
+
+    system(&quot;pause&quot;);                
+    return 0;
+}</code></pre>
+<h4 id="3-wait-until"><a href="#3-wait-until" class="headerlink" title="3. wait_until()"></a>3. wait_until()</h4><pre><code class="cpp">cv_status wait_until(unique_lock&lt;mutex&gt;&amp; _Lck, const chrono::time_point&lt;_Clock, _Duration&gt;&amp; _Abs_time)
+
+bool wait_until(unique_lock&lt;mutex&gt;&amp; _Lck, const chrono::time_point&lt;_Clock, _Duration&gt;&amp; _Abs_time, _Predicate _Pred) </code></pre>
+<p>wait_until可以指定一个时间点，在当前线程收到通知或者指定的时间点_Abs_time超时之前，该线程都会处于阻塞状态，而一旦超时或者收到了其他线程的通知，wait_until返回，剩下的处理步骤和wait_for类似。</p>
+<p>版本二最后一个参数_Pred表示wait_until的预测条件，只有当_Pred条件为false时调用wait才会阻塞当前线程，并且在收到其他线程的通知后只有当_Pred为true时才会被解除阻塞，因此相当于如下代码：</p>
+<pre><code class="cpp">if(wait_until(lck,abs_time) == cv_status::timeout)
+    return pred();</code></pre>
+<h4 id="4-notify-one"><a href="#4-notify-one" class="headerlink" title="4. notify_one()"></a>4. notify_one()</h4><p>唤醒某个等待(wait)线程,如果当前没有线程，则该函数什么都不做，如果同时存在多个，则随机唤醒。</p>
+<p>以下样例交替打印，但是如若线程较忙，则需要更大时间间隔</p>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+
+using namespace std;
+
+class FooBar {
+private:
+    int n;
+    mutex mu;
+    condition_variable cond;
+public:
+    FooBar(int n) {
+        this-&gt;n = n;
+    }
+
+    void foo(function&lt;void()&gt; printFoo) {
+
+        for (int i = 0; i &lt;= n; i++) {
+            // printFoo() outputs &quot;foo&quot;. Do not change or remove this line.
+            unique_lock&lt;mutex&gt; locker(mu);
+            if(i&gt;0)
+                printFoo();
+            locker.unlock();
+            cond.notify_one();
+            this_thread::sleep_for(chrono::microseconds(10));
+        }
+    }
+
+    void bar(function&lt;void()&gt; printBar) {
+
+        for (int i = 0; i &lt;= n; i++) {
+            // printBar() outputs &quot;bar&quot;. Do not change or remove this line.
+            unique_lock&lt;mutex&gt; locker(mu);
+            cond.wait(locker);
+            printBar();
+            locker.unlock();
+        }
+    }
+
+};
+
+int main()
+{
+    FooBar f(12);
+    thread th1(&amp;FooBar::foo, &amp;f, []() {cout &lt;&lt; &quot;foo&quot;; });
+    thread th2(&amp;FooBar::bar, &amp;f, []() {cout &lt;&lt; &quot;bar&quot; &lt;&lt; endl; });
+
+    th1.join();
+    th2.join();
+    cout &lt;&lt; &quot;It&#39;s over.&quot; &lt;&lt; endl;
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<h4 id="5-notify-all"><a href="#5-notify-all" class="headerlink" title="5. notify_all()"></a>5. notify_all()</h4><p>唤醒所有的等待线程，如果当前没有等待线程，则该函数什么也不做。</p>
+<p>示例：<a href="https://www.jianshu.com/p/c1dfa1d40f53" target="_blank" rel="noopener">生产者与消费者模型</a></p>
+<pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;deque&gt;
+#include &lt;thread&gt;
+#include &lt;mutex&gt;
+#include &lt;condition_variable&gt;
+
+std::deque&lt;int&gt; q;
+std::mutex mu;
+std::condition_variable cond;
+
+void function_1() {
+    int count = 10;
+    while (count &gt; 0) {
+        std::unique_lock&lt;std::mutex&gt; locker(mu);
+        q.push_front(count);
+        locker.unlock();
+        cond.notify_one();  // Notify one waiting thread, if there is one.
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        count--;
+    }
+}
+
+void function_2() {
+    int data = 0;
+    while (data != 1) {
+        std::unique_lock&lt;std::mutex&gt; locker(mu);
+        while (q.empty())
+            cond.wait(locker, []() {return !q.empty(); }); // Unlock mu and wait to be notified
+        data = q.back();
+        q.pop_back();
+        locker.unlock();
+        std::cout &lt;&lt; &quot;t2 got a value from t1: &quot; &lt;&lt; data &lt;&lt; std::endl;
+    }
+}
+
+int main() {
+    std::thread t1(function_1);
+    std::thread t2(function_2);
+    t1.join();
+    t2.join();
+    return 0;
+}</code></pre>
+<h2 id="condition-variable-any"><a href="#condition-variable-any" class="headerlink" title="condition_variable_any"></a>condition_variable_any</h2><p>与condition_variable类似，只不过condition_variable_any的wait函数可以接受任何lockable参数，而condition_variable只能接受unique_lock类型的参数，除此之外，和其几乎完全一样。</p>
+<h1 id="异步运行（async"><a href="#异步运行（async" class="headerlink" title="异步运行（async)"></a><a href="https://www.jianshu.com/p/7945428c220e" target="_blank" rel="noopener">异步运行（async)</a></h1><p>async顾名思义是将一个函数A移至另一个线程中去运行。A可以是静态函数，全局函数，甚至类成员函数。在异步运行的过程中，如果A需要向调用者输出结果怎么办呢？std::async完美的解决了这一问题。在了解async的解决之道前，我们需要一些知识储备：std::promise, std:pachaged_task和std::future。异步运行涉及的内容较多，分几节来讲。</p>
+<h2 id="std-promise"><a href="#std-promise" class="headerlink" title="std::promise"></a>std::promise</h2><p>std::promise是一个模板类：template<typename R> class promise。其泛型参数R为std::promise对象保存的值的类型，R可以是void类型。std::promise保存的值可被与之关联的std::future读取，读取操作可以发生在其它线程。std::promise允许move语义（右值构造，右值赋值），但不允许拷贝（拷贝构造、赋值），std::future亦然。promise和future合作共同实现了多线程间通信。</p>
+<h3 id="1-1-设置promise的值"><a href="#1-1-设置promise的值" class="headerlink" title="1.1 设置promise的值"></a>1.1 设置promise的值</h3><p>通过成员函数set_value可以设置promise中保存的值，该值最终会被与之关联的future::get读取到。需要注意的是：set_value只能被调用一次，多次调用会抛出std::future_error异常。事实上std::promise::set_xxx函数会改变promise的状态为ready，再次调用时发现状态已经是ready了，则抛出异常。</p>
+<pre><code class="cpp">#include &lt;iostream&gt; // std::cout, std::endl
+#include &lt;thread&gt;   // std::thread
+#include &lt;string&gt;   // std::string
+#include &lt;future&gt;   // std::promise, std::future
+#include &lt;chrono&gt;   // seconds
+using namespace std::chrono;
+
+void read(future&lt;string&gt;* fut)
+{
+    //fu会一直阻塞，直到有值到来
+    cout &lt;&lt; fut-&gt;get() &lt;&lt; endl;
+}
+
+int main()
+{
+    //prom相当于生产者
+    promise&lt;string&gt; prom;
+
+    //fut相当于消费者
+    future&lt;string&gt; fut = prom.get_future();
+
+    //另一个线程通过fut来读取prom的值
+    thread th(read, &amp;fut);
+
+    //让read等一会儿
+    this_thread::sleep_for(chrono::seconds(1));
+
+    prom.set_value(&quot;hello future&quot;);
+    //等待线程执行完成
+    th.join();
+
+    system(&quot;pause&quot;);
+    return 0;
+}
+// 控制台输: hello future</code></pre>
+<p>参考资料：<a href="https://www.cnblogs.com/haippy/p/3239248.html" target="_blank" rel="noopener">C++并发指南</a></p>
+<h2 id="std-packaged-task"><a href="#std-packaged-task" class="headerlink" title="std::packaged_task"></a><a href="https://www.jianshu.com/p/72601d82f3df" target="_blank" rel="noopener">std::packaged_task</a></h2><p>参考资料2 <a href="https://blog.csdn.net/godmaycry/article/details/72868559" target="_blank" rel="noopener">packaged_task</a></p>
+<p>用途：异步获取可调用对象执行的结果</p>
+<pre><code class="cpp">#include &lt;thread&gt;   // std::thread
+#include &lt;future&gt;   // std::packaged_task, std::future
+#include &lt;iostream&gt; // std::cout
+
+using namespace std;
+
+int sum(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    packaged_task&lt;int(int, int)&gt; task(sum);
+    future&lt;int&gt; future = task.get_future();
+
+    // std::promise一样，std::packaged_task支持move，但不支持拷贝
+    // std::thread的第一个参数不止是函数，还可以是一个可调用对象，即支持operator()(Args...)操作
+    thread t(move(task), 1, 2);
+    // 等待异步计算结果
+    cout &lt;&lt; &quot;1 + 2 =&gt; &quot; &lt;&lt; future.get() &lt;&lt; endl;
+
+    t.join();
+
+    system(&quot;pause&quot;);
+    return 0;
+}
+/// 输出: 1 + 2 =&gt; 3</code></pre>
+<h2 id="std-future"><a href="#std-future" class="headerlink" title="std::future"></a><a href="https://www.jianshu.com/p/58dea28d1a95" target="_blank" rel="noopener">std::future</a></h2><h1 id="专题"><a href="#专题" class="headerlink" title="专题"></a>专题</h1><p>线程：时间限制</p>
+<pre><code class="cpp">thread t1(fun);
+this_thread::sleep_for(chrono::microseconds(3));
+chrono::steady_clock::time_point tp = chrono::steady_clock::now() + chrono::microseconds(4);
+this_thread::sleep_until(tp);
+
+mutex mu;
+unique_lock&lt;mutex&gt; locker(mu);
+locker.try_lock_for(chrono::microseconds(3));
+locker.try_lock_until(tp);
+
+condition_variable cond;
+cond.wait_for(locker,chrono::microseconds(3));
+cond.wait_until(locker,tp);
+
+promise&lt;int&gt; p;
+future&lt;int&gt; f = p.get_future();
+f.wait_for(chrono::microseconds(3));
+f.wait_until(tp);</code></pre>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/26/c-%E6%9C%AA%E5%BD%92%E7%B1%BB%E4%BB%A3%E7%A0%81/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  c-未归类代码
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4/">
+                常用工具命令
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Been Stone</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

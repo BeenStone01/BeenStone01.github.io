@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		C++代码样例 | 
+	 
+	Been&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="my markdown blog" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">Been's Blog</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/BeenStone01" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/04/23/C++%E4%BB%A3%E7%A0%81%E6%A0%B7%E4%BE%8B/">
+										C++代码样例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/19/GPIB/">
+										GPIB
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Laravel/">
+										Laravel
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/Linux%E5%9C%A8%E7%BA%BF/">
+										Linux在线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC/">
+										MFC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+										MFC多线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%8C%89%E9%92%AE/">
+										MFC自绘按钮
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%A6%82%E8%BF%B0/">
+										MFC自绘概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/SSDP%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/">
+										SSDP开发说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL_vector/">
+										STL_vector
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL/">
+										STL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinHttp%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinHttp使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinInet%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinInet使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Wininte%E6%A0%B7%E4%BE%8B%E8%A7%A3%E6%9E%90/">
+										Wininte样例解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/XML%E4%B9%8BIXMLHTTPReuest/">
+										XML之IXMLHTTPReuest
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E6%93%8D%E4%BD%9C%E4%B9%8BCMarkUp/">
+										XML操作之CMarkUp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E8%A7%A3%E6%9E%90/">
+										XML解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/c++11/">
+										c++11
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/06/c++%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+										c++小程序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/c-%E6%9C%AA%E5%BD%92%E7%B1%BB%E4%BB%A3%E7%A0%81/">
+										c-未归类代码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/hexo/">
+										hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/socket/">
+										socket
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/thread-2/">
+										thread-2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/thread/">
+										thread
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/vue%E7%AC%94%E8%AE%B0/">
+										vue笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/webpack%E4%BD%BF%E7%94%A8/">
+										webpack使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/30/%E4%B8%B2%E5%8F%A3com%E7%BC%96%E7%A8%8B/">
+										串口com编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/03/%E5%88%B7%E9%A2%98%E7%BA%AA%E5%BD%95/">
+										刷题纪录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/">
+										字符类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
+										小程序开发笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4/">
+										常用工具命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/">
+										文件读写
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+										编码格式转换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	C++代码样例
+</h1>
+<div class="article-meta">
+	
+	<span>Been Stone</span>
+	<span>2020-04-23 17:08:18</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="C语言"><a href="#C语言" class="headerlink" title="C语言"></a>C语言</h1><pre><code class="c"></code></pre>
+<h1 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h1><h2 id="字符串相关"><a href="#字符串相关" class="headerlink" title="字符串相关"></a>字符串相关</h2><h4 id="计算长度"><a href="#计算长度" class="headerlink" title="计算长度"></a>计算长度</h4><pre><code class="cpp">int str_count(const char* s)
+{
+    if(NULL == s)
+        return 0;
+    int i = 0;
+    while(&#39;\0&#39; != s[i++]);
+    return i;
+}</code></pre>
+<h4 id="创建副本-堆空间"><a href="#创建副本-堆空间" class="headerlink" title="创建副本(堆空间)"></a>创建副本(堆空间)</h4><pre><code class="cpp">char* str_new(const char* str)
+{
+    if(NULL == str)
+        return NULL;
+    int len = str_count(str);
+    char* ptr = (char*)malloc(sizeof(char) * (len));
+    memset(ptr,0,len);
+    if (NULL == ptr)
+    {
+        fprintf(stderr, &quot;Failed to malloc for new_str().\n&quot;);
+        return NULL;
+    }
+    strcpy_s(ptr, len, str);
+    return ptr;
+}</code></pre>
+<h4 id="字符串解析"><a href="#字符串解析" class="headerlink" title="字符串解析"></a>字符串解析</h4><pre><code class="cpp">int str_split(char* src, const char* delim, char** rows)
+{
+    assert(src || delim || rows);
+    if (NULL == src || NULL == delim)
+    {
+        fprintf(stderr, &quot;str_split() param is invalid.\n&quot;);
+        return 0;
+    }
+    char* buf = { 0 };
+    rows[0] = strtok_s(src, delim, &amp;buf);
+    int i = 0;
+    while (rows[i++])
+    {
+        rows[i] = strtok_s(NULL, delim, &amp;buf);
+    }
+    return i;
+}
+
+vector&lt;string&gt; split(const string&amp; str, const string&amp; delim)
+{
+    int size;
+    int p1;
+    int p2;
+    vector&lt;string&gt; res;
+
+    if (&quot;&quot; == str) return res;
+    string strs = str + delim;
+    size = delim.length();
+    p1 = 0;
+    do
+    {
+        p2 = strs.find(delim, p1);
+        if (p2 &gt; p1) {
+            string s1 = strs.substr(p1, p2 - p1);
+            res.push_back(s1);
+        }
+        p1 = p2 + size;
+    } while (-1 != p2);
+    return res;
+}
+
+void str_Split(CString szSour, CStringArray&amp; dest, CString szDelim)
+{
+    int n1 = 0,
+        n2 = 0,
+        nSize = 0;
+
+    if (szSour.IsEmpty())
+        return;
+    szSour += szDelim;
+    nSize = szDelim.GetLength();
+    do
+    {
+        n2 = szSour.Find(szDelim, n1);
+        if (n2 &gt; n1)
+        {
+            CString szStr = szSour.Mid(n1, n2 - n1);
+            dest.Add(szStr);
+        }
+        n1 = n2 + nSize;
+    } while (-1 != n2);
+}</code></pre>
+<h4 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h4><pre><code class="cpp">char* str_cut(const char* src, int length_left, int length_right)
+{
+    int l = length_left,
+        r = length_right,
+        len;
+    char* str;
+
+    if (NULL == src)
+    {
+        fprintf(stderr, &quot;The parament of fuction: strcur() is wrong.\n&quot;);
+        return NULL;
+    }
+    len = strlen(src);
+    if (len &lt; l + r)
+    {
+        fprintf(stderr, &quot;The parament of fuction: strcur() is wrong.\n&quot;);
+        return NULL;
+    }
+    str = (char*)malloc(len - l - r + 1);
+    if (NULL == str)
+    {
+        fprintf(stderr, &quot;Failed to malloc for ptr @str_cut().\n&quot;);
+        return NULL;
+    }
+    memset(str, 0, len - l - r + 1);
+    memmove(str, src + l, len - l - r);
+    return str;
+}</code></pre>
+<h4 id="查找字符串"><a href="#查找字符串" class="headerlink" title="查找字符串"></a>查找字符串</h4><pre><code class="cpp">int in_array(char* str, char** array, int count)
+{
+    int i = 0;
+    if (NULL == str)    return 0;
+    for (; i &lt; count; i++)
+    {
+        if (0 == strcmp(str, array[i]))
+            return i;
+    }
+    return -1;
+}</code></pre>
+<h4 id="关键词检索"><a href="#关键词检索" class="headerlink" title="关键词检索"></a>关键词检索</h4><pre><code class="cpp">//关键字检索
+int has_keys(char* str, const char** key_array, int array_size)
+{
+    int i = 0;
+    for (; i &lt; array_size; i++)
+    {
+        if (0 == strncmp(str, key_array[i], strlen(key_array[i])))
+        {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+//检索地址信息
+int is_location(char* str)
+{
+    if (NULL == str) return 0;
+    const char* array_key[] = { &quot;LOCATION:&quot;,&quot;Location:&quot; };
+    return has_keys(str, array_key, sizeof(array_key) / sizeof(array_key[0]));
+}
+
+//检索长度信息
+int is_length(char* str)
+{
+    if (NULL == str)    return 0;
+    const char* length_keys[] = { &quot;Content-Length:&quot;,&quot;CONTENT-LENGTH:&quot; };
+    if (has_keys(str, length_keys, sizeof(length_keys) / sizeof(length_keys[0])))
+        return 1;
+    else
+        return 0;
+}</code></pre>
+<h2 id="获取设备信息"><a href="#获取设备信息" class="headerlink" title="获取设备信息"></a>获取设备信息</h2><h3 id="1-1-获取网卡信息"><a href="#1-1-获取网卡信息" class="headerlink" title="1.1. 获取网卡信息"></a>1.1. 获取网卡信息</h3><pre><code class="cpp">#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;WS2tcpip.h&gt;
+#pragma comment(lib, &quot;ws2_32.lib&quot;)
+#include &lt;Iphlpapi.h&gt;
+#pragma comment(lib, &quot;Iphlpapi.lib&quot;)
+
+void GetInfo()
+{
+    PIP_ADAPTER_INFO pAdapterInfo;
+    PIP_ADAPTER_INFO pAdapter = NULL;
+    ULONG ulOutBufLen = sizeof(IP_ADAPTER_INFO);
+    pAdapterInfo = (PIP_ADAPTER_INFO)malloc(ulOutBufLen);
+    DWORD dwRetVal = GetAdaptersInfo(pAdapterInfo, &amp;ulOutBufLen);
+    // 第一次调用GetAdapterInfo获取ulOutBufLen大小
+    if (dwRetVal == ERROR_BUFFER_OVERFLOW)
+    {
+        free(pAdapterInfo);
+        pAdapterInfo = (IP_ADAPTER_INFO*)malloc(ulOutBufLen);
+        dwRetVal = GetAdaptersInfo(pAdapterInfo, &amp;ulOutBufLen);
+    }
+    if (dwRetVal == NO_ERROR)
+    {
+        pAdapter = pAdapterInfo;
+        while (pAdapter)
+        {
+            printf(&quot;Adapter Name: \t%s\n&quot;, pAdapter-&gt;AdapterName);
+            printf(&quot;Adapter Desc: \t%s\n&quot;, pAdapter-&gt;Description);
+            printf(&quot;MAC Addr: \t%02x-%02x-%02x-%02x-%02x-%02x\n&quot;,
+                pAdapter-&gt;Address[0],
+                pAdapter-&gt;Address[1],
+                pAdapter-&gt;Address[2],
+                pAdapter-&gt;Address[3],
+                pAdapter-&gt;Address[4],
+                pAdapter-&gt;Address[5]);
+            printf(&quot;IP Address: \t%s\n&quot;, pAdapter-&gt;IpAddressList.IpAddress.String);
+            printf(&quot;IP Mask: \t%s\n&quot;, pAdapter-&gt;IpAddressList.IpMask.String);
+            printf(&quot;Gateway: \t%s\n&quot;, pAdapter-&gt;GatewayList.IpAddress.String);
+            pAdapter = pAdapter-&gt;Next;
+        }// end while
+    }
+    else
+    {
+        printf(&quot;Call to GetAdaptersInfo failed.\n&quot;);
+    }
+}
+
+int main()
+{
+    GetInfo();
+    return 0;
+}</code></pre>
+<p>####1.1.1 获取网关及IP地址</p>
+<pre><code class="cpp">void CMFCApp::GetHostInfo()
+{
+    gethostname(m_sHostName, sizeof(m_sHostName));
+    PIP_ADAPTER_INFO pAdapterInfo;
+    PIP_ADAPTER_INFO pAdapter = NULL;
+    ULONG ulOutBufLen = sizeof(IP_ADAPTER_INFO);
+    pAdapterInfo = (PIP_ADAPTER_INFO)malloc(ulOutBufLen);
+    DWORD dwRetVal = GetAdaptersInfo(pAdapterInfo, &amp;ulOutBufLen);
+    // 第一次调用GetAdapterInfo获取ulOutBufLen大小
+    if (dwRetVal == ERROR_BUFFER_OVERFLOW)
+    {
+        free(pAdapterInfo);
+        pAdapterInfo = (IP_ADAPTER_INFO*)malloc(ulOutBufLen);
+        dwRetVal = GetAdaptersInfo(pAdapterInfo, &amp;ulOutBufLen);
+    }
+    if (dwRetVal == NO_ERROR)
+    {
+        pAdapter = pAdapterInfo;
+        while (pAdapter)
+        {
+            strcpy_s(m_sGateway, 16, pAdapter-&gt;GatewayList.IpAddress.String);
+            char* buf = NULL;
+            char* ptr = strtok_s(m_sGateway, &quot;.&quot;, &amp;buf);
+            if (192 == atoi(m_sGateway))
+            {
+                strcpy_s(m_sGateway, pAdapter-&gt;GatewayList.IpAddress.String);
+                break;
+            }
+            pAdapter = pAdapter-&gt;Next;
+        }
+        pAdapter = pAdapterInfo;
+        while (pAdapter)
+        {
+            CString szIP(m_sGateway, 16, pAdapter-&gt;GatewayList.IpAddress.String);
+            if (IsInSubNet(szIP))
+            {
+                strcpy_s(m_sIP, pAdapter-&gt;IpAddressList.IpAddress.String);
+                break;
+            }
+            pAdapter = pAdapter-&gt;Next;
+        }
+    }
+}</code></pre>
+<h3 id="1-2-获取IP地址列表"><a href="#1-2-获取IP地址列表" class="headerlink" title="1.2 获取IP地址列表"></a>1.2 获取IP地址列表</h3><pre><code class="cpp">#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;WinSock2.h&gt;
+#include &lt;WS2tcpip.h&gt;
+#pragma comment(lib,&quot;ws2_32.lib&quot;)
+
+void getIPs(char** array_url, int size)
+{
+    WSADATA WSAData;
+    if (WSAStartup(MAKEWORD(2, 2), &amp;WSAData) != 0)
+    {
+        printf(&quot;WSAStartup() error!\n&quot;);
+        return;
+    }
+
+    int i = 0;
+    struct addrinfo hints;
+    struct addrinfo* res, * cur;
+    struct sockaddr_in* addr;
+
+    memset(&amp;hints, 0, sizeof(struct addrinfo));
+    hints.ai_family = AF_INET;     /* Allow IPv4 */
+    hints.ai_flags = AI_PASSIVE;/* For wildcard IP address */
+    hints.ai_protocol = 0;         /* Any protocol */
+    hints.ai_socktype = SOCK_DGRAM;
+
+    if (getaddrinfo(&quot;&quot;, NULL, &amp;hints, &amp;res) == -1) {
+        fprintf(stderr, &quot;get_host_ip(): Failed to getaddrinfo().\n&quot;);
+        return;
+    }
+
+    for (cur = res; cur != NULL &amp;&amp; i &lt; size; cur = cur-&gt;ai_next) {
+        addr = (struct sockaddr_in*)cur-&gt;ai_addr;
+        array_url[i] = (char*)malloc(sizeof(char) * 16);
+        if (NULL == array_url[i])
+        {
+            fprintf(stderr, &quot;get_host_ip() : Failed to malloc for array_url.\n&quot;);
+            return;
+        }
+        memset(array_url[i], 0, 16);
+        sprintf_s(array_url[i++], 16, &quot;%d.%d.%d.%d&quot;,
+            (*addr).sin_addr.S_un.S_un_b.s_b1,
+            (*addr).sin_addr.S_un.S_un_b.s_b2,
+            (*addr).sin_addr.S_un.S_un_b.s_b3,
+            (*addr).sin_addr.S_un.S_un_b.s_b4);
+    }
+    WSACleanup();
+}
+
+int main()
+{
+    char* urls[5] = { 0 };
+    getIPs(urls,5);
+
+    for (int i = 0; i &lt; 5; i++)
+    {
+        if(sizeof(urls[1])&gt;0)
+            printf(&quot;%s\n&quot;, urls[i]);
+        free(urls[i]);
+        urls[i] = NULL;
+    }
+
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<h3 id="3-获取IP-MFC"><a href="#3-获取IP-MFC" class="headerlink" title="3. 获取IP-MFC"></a>3. 获取IP-MFC</h3><pre><code class="cpp">void CChatApp::InitInfo()
+{
+    if (!m_sock.Create(UPORT, SOCK_DGRAM))
+    {
+        AfxMessageBox(_T(&quot;端口创建失败！&quot;));
+        return;
+    }
+
+    SInfo&amp; info = m_info;
+    gethostname(info.sHost, sizeof(info.sHost));
+
+    ADDRINFOA hints;
+    ADDRINFOA* result;
+    ZeroMemory(&amp;hints, sizeof(ADDRINFO));
+    hints.ai_family = AF_INET;
+    hints.ai_protocol = 0;
+    hints.ai_flags = AI_PASSIVE;
+    hints.ai_socktype = SOCK_DGRAM;
+    int res = GetAddrInfo(info.sHost, NULL, &amp;hints, &amp;result);
+    SOCKADDR_IN* addr = (SOCKADDR_IN*)result-&gt;ai_addr;
+    IN_ADDR* ad = (IN_ADDR*)&amp;addr-&gt;sin_addr;
+    inet_ntop(result-&gt;ai_family, ad, info.sIP, sizeof(info.sIP));
+
+    DWORD dw = sizeof(info.sName);
+    GetUserName(info.sName, &amp;dw);
+
+    //以255结尾的IP地址是虚拟IP，用于网段内群发数据
+    CString sIP(info.sIP);
+    int i = sIP.ReverseFind(&#39;.&#39;);
+    sIP = sIP.Left(i + 1) + _T(&quot;255&quot;);
+    SPack pack = { SEND_HELLO };
+    memcpy(pack.data, &amp;info, sizeof(info));
+    m_sock.SendTo(&amp;pack, sizeof(info) + sizeof(int), UPORT, sIP);
+}
+</code></pre>
+<h3 id="4-URL解析-vc"><a href="#4-URL解析-vc" class="headerlink" title="4. URL解析-vc++"></a>4. URL解析-vc++</h3><pre><code class="cpp">#include &lt;WinInet.h&gt;
+#pragma comment(lib,&quot;wininet.lib&quot;)
+
+TCHAR sHostName[128];
+TCHAR sURLPath[256];
+URL_COMPONENTS crackedURL = { 0 };
+crackedURL.dwStructSize = sizeof(URL_COMPONENTS);
+crackedURL.lpszHostName = sHostName;
+crackedURL.dwHostNameLength = ARRAYSIZE(sHostName);
+crackedURL.lpszUrlPath = sURLPath;
+crackedURL.dwUrlPathLength = ARRAYSIZE(sURLPath);
+InternetCrackUrl(szUrl, (DWORD)_tcslen(szUrl), 0, &amp;crackedURL);
+crackedURL.lpszHostName;
+crackedURL.lpszUrlPath;
+crackedURL.nPort;</code></pre>
+<h3 id="5-URL解析-硬解"><a href="#5-URL解析-硬解" class="headerlink" title="5. URL解析-硬解"></a>5. URL解析-硬解</h3><pre><code class="cpp">#include &lt;string&gt;
+#include &lt;iostream&gt;
+
+using namespace std;
+string _trim(const string&amp; str)
+{
+    size_t start = str.find_first_not_of(&quot; \n\r\t&quot;);
+    size_t until = str.find_last_not_of(&quot; \n\r\t&quot;);
+    string::const_iterator i = start == string::npos ? str.begin() : str.begin() + start;
+    string::const_iterator x = until == string::npos ? str.end() : str.begin() + until + 1;
+    return string(i, x);
+}
+
+void parse_url(const string&amp; raw_url) //no boost
+{
+    string path, domain, x, protocol, port, query;
+    int offset = 0;
+    size_t pos1, pos2, pos3, pos4;
+    x = _trim(raw_url);
+    offset = offset == 0 &amp;&amp; x.compare(0, 8, &quot;https://&quot;) == 0 ? 8 : offset;
+    offset = offset == 0 &amp;&amp; x.compare(0, 7, &quot;http://&quot;) == 0 ? 7 : offset;
+    pos1 = x.find_first_of(&#39;/&#39;, offset + 1);
+    path = pos1 == string::npos ? &quot;&quot; : x.substr(pos1);
+    domain = string(x.begin() + offset, pos1 != string::npos ? x.begin() + pos1 : x.end());
+    path = (pos2 = path.find(&quot;#&quot;)) != string::npos ? path.substr(0, pos2) : path;
+    port = (pos3 = domain.find(&quot;:&quot;)) != string::npos ? domain.substr(pos3 + 1) : &quot;&quot;;
+    domain = domain.substr(0, pos3 != string::npos ? pos3 : domain.length());
+    protocol = offset &gt; 0 ? x.substr(0, offset - 3) : &quot;&quot;;
+    query = (pos4 = path.find(&quot;?&quot;)) != string::npos ? path.substr(pos4 + 1) : &quot;&quot;;
+    path = pos4 != string::npos ? path.substr(0, pos4) : path;
+    cout &lt;&lt; &quot;[&quot; &lt;&lt; raw_url &lt;&lt; &quot;]&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;protocol: &quot; &lt;&lt; protocol &lt;&lt; endl;
+    cout &lt;&lt; &quot;domain: &quot; &lt;&lt; domain &lt;&lt; endl;
+    cout &lt;&lt; &quot;port: &quot; &lt;&lt; port &lt;&lt; endl;
+    cout &lt;&lt; &quot;path: &quot; &lt;&lt; path &lt;&lt; endl;
+    cout &lt;&lt; &quot;query: &quot; &lt;&lt; query &lt;&lt; endl;
+}
+
+int main(int argc, char* argv[])
+{
+    parse_url(&quot;http://192.168.1.66:2869/upnphost/udhisapi.dll?content=uuid:d8560539-1ea6-4511-bc5c-6f93f9115023&quot;);
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<h3 id="获取系统盘符（一）"><a href="#获取系统盘符（一）" class="headerlink" title="获取系统盘符（一）"></a>获取系统盘符（一）</h3><pre><code class="cpp">#include &lt;iostream&gt;  
+#include &lt;windows.h&gt;  
+#include &lt;tchar.h&gt;  
+
+using namespace std;
+int _tmain(int argc, _TCHAR* argv[])
+{
+    TCHAR szBuf[100];
+    memset(szBuf, 0, 100);
+
+    DWORD len = GetLogicalDriveStrings(sizeof(szBuf) / sizeof(TCHAR), szBuf);
+
+    for (TCHAR * s = szBuf; *s; s += _tcslen(s) + 1) {
+        LPCTSTR sDrivePath = s;
+        cout &lt;&lt; sDrivePath &lt;&lt; endl;
+    }
+
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<h3 id="获取系统盘符（二）"><a href="#获取系统盘符（二）" class="headerlink" title="获取系统盘符（二）"></a>获取系统盘符（二）</h3><pre><code class="cpp">#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;Windows.h&gt;
+#include &lt;string&gt;
+
+using namespace std;
+int main(int argc, char* argv[])
+{
+    DWORD dwLogical = GetLogicalDrives();
+    char c = &#39;A&#39;;
+    int count = 0;
+    while (dwLogical)
+    {
+        if (dwLogical &amp; 0x01)
+        {
+            printf(&quot;%c\n&quot;, c);
+            count++;
+        }
+        dwLogical &gt;&gt;= 1;
+        c++;
+    }
+    //Retrieve the name of device 
+    TCHAR sHostName[25] = { 0 };
+    DWORD dwSize = sizeof(sHostName);
+    GetComputerName(sHostName, &amp;dwSize);
+    string str = sHostName;
+
+    printf(&quot;there are %d logical disks in %s\n&quot;,count, str.c_str());
+
+    return 0;
+}</code></pre>
+<h3 id="获取系统盘符（三）"><a href="#获取系统盘符（三）" class="headerlink" title="获取系统盘符（三）"></a>获取系统盘符（三）</h3><pre><code class="cpp">#include &lt;iostream&gt;
+#include &lt;atlstr.h&gt; 
+using namespace std;
+
+int main()
+{
+    char rootPath[10] = { 0 },
+        driveType[21] = { 0 };
+    UINT nType;
+
+    for (char a = &#39;A&#39;; a &lt;= &#39;Z&#39;; a++)
+    {
+        sprintf_s(rootPath, &quot;%c:\\&quot;, a);
+        nType = GetDriveType(rootPath);
+        if (nType != DRIVE_NO_ROOT_DIR)                  // DRIVE_NO_ROOT_DIR: 路径无效  
+        {
+            switch (nType)
+            {
+            case DRIVE_FIXED:
+                strcpy_s(driveType, &quot;硬盘&quot;);
+                break;
+            case DRIVE_REMOVABLE:
+                strcpy_s(driveType, &quot;移动硬盘&quot;);
+                break;
+            case DRIVE_CDROM:
+                strcpy_s(driveType, &quot;光盘&quot;);
+                break;
+            case DRIVE_RAMDISK:
+                strcpy_s(driveType, &quot;RAM盘&quot;);
+                break;
+            case DRIVE_REMOTE:
+                strcpy_s(driveType, &quot;Remote(Network) drive 网络磁盘&quot;);
+                break;
+            case DRIVE_UNKNOWN:
+            default:
+                strcpy_s(driveType, &quot;未知盘&quot;);
+                break;
+            }
+            cout &lt;&lt; rootPath &lt;&lt; &quot;\t&quot; &lt;&lt; driveType &lt;&lt; endl;
+        }
+    }
+
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<h3 id="获取当前位置"><a href="#获取当前位置" class="headerlink" title="获取当前位置"></a>获取当前位置</h3><pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;direct.h&gt;
+
+int main()
+{
+    printf(&quot;\nargc = %d\n&quot;,argc);
+    for(int i = 0; i&lt;argc;i++)
+    {
+        printf(&quot;argv[%d] = %s\n&quot;,i,argv[i]);
+    }
+    printf(&quot;\n---------------------------------------------------------------------\n\n&quot;);
+    //获取执行文件当前位置
+    char buffer[1024];
+    _getcwd(buffer,1024);
+    printf(&quot;%s\n&quot;,buffer);
+}</code></pre>
+<h3 id="获取DNS"><a href="#获取DNS" class="headerlink" title="获取DNS"></a>获取DNS</h3><pre><code class="cpp">#pragma warning(disable:4996)
+#include &lt;stdio.h&gt;  
+#include &lt;WinSock2.h&gt;  
+#include &lt;iphlpapi.h&gt;  
+
+#pragma comment(lib, &quot;IPHLPAPI.lib&quot;)  
+#pragma comment(lib, &quot;ws2_32.lib&quot;)  
+int main() // 获取本地主机名、域名和DNS服务器信息  
+{
+    // 声明变量  
+    FIXED_INFO * FixedInfo;     // 定义保存本地计算机网络参数信息的结构体指针  
+    ULONG    ulOutBufLen;       // 保存获取到的本地计算机网络参数信息结构体链表的长度  
+    DWORD    dwRetVal;          // 调用GetNetworkParams()函数的返回值  
+    IP_ADDR_STRING * pIPAddr;   // 保存所有DNS服务器的IP地址列表  
+
+    FixedInfo = (FIXED_INFO *)GlobalAlloc(GPTR, sizeof(FIXED_INFO));   // 为FixedInfo结构体分配内存空间  
+    ulOutBufLen = sizeof(FIXED_INFO);         // 初始化ulOutBufLen变量值  
+
+                                              // 第1次调用GetNetworkParams()函数，获取返回结果的大小到ulOutBufLen中  
+    if (ERROR_BUFFER_OVERFLOW == GetNetworkParams(FixedInfo, &amp;ulOutBufLen))
+    {
+        GlobalFree(FixedInfo);
+        FixedInfo = (FIXED_INFO *)GlobalAlloc(GPTR, ulOutBufLen);
+    }
+
+    // 第2次调用GetNetworkParams()函数，以前面获取的ulOutBufLen作为参数，  
+    if (dwRetVal = GetNetworkParams(FixedInfo, &amp;ulOutBufLen) != ERROR_SUCCESS)
+    {
+        printf(&quot;调用GetNetworkParams()函数失败。返回值: %08x\n&quot;, dwRetVal);
+    }
+    else
+    {
+        printf(&quot;\nDNS服务器列表:\n&quot;);
+        printf(&quot;%s\n&quot;, FixedInfo-&gt;DnsServerList.IpAddress.String);
+
+        pIPAddr = FixedInfo-&gt;DnsServerList.Next;
+        while (pIPAddr)
+        {
+            printf(&quot;\t%s\n&quot;, pIPAddr-&gt;IpAddress.String);
+            pIPAddr = pIPAddr-&gt;Next;
+        }
+    }
+    printf(&quot;按下回车键结束\n&quot;);
+    getchar();
+    return 0;
+}</code></pre>
+<h3 id="获取当前时间"><a href="#获取当前时间" class="headerlink" title="获取当前时间"></a>获取当前时间</h3><pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main()
+{
+    time_t rawTime;
+    time(&amp;rawTime);
+    struct tm* st = localtime(&amp;rawTime);//返回了一个静态变量的地址
+    printf(&quot;current year = %d\n&quot;, st-&gt;tm_year + 1900);
+    printf(&quot;current month = %d\n&quot;, st-&gt;tm_mon + 1);
+    printf(&quot;current day = %d\n&quot;, st-&gt;tm_mday);
+    printf(&quot;current hour = %d\n&quot;, st-&gt;tm_hour);
+    printf(&quot;current minute = %d\n&quot;, st-&gt;tm_min);
+    printf(&quot;current second = %d\n&quot;, st-&gt;tm_sec);
+    return 0;
+}</code></pre>
+<h3 id="端口查杀"><a href="#端口查杀" class="headerlink" title="端口查杀"></a>端口查杀</h3><pre><code class="cpp">//解除1900端口占用
+void killpid()
+{
+    int i = 0,
+        size,
+        len;
+    char* rows[5] = { 0 };
+    char* array_pid[5] = { 0 };
+    char buf[100] = { 0 };
+    const char* delim = &quot; &quot;;
+    FILE* fpr;
+    system(&quot;netstat -ano|findstr 1900 &gt; pid.txt&quot;);
+    fopen_s(&amp;fpr, &quot;./pid.txt&quot;, &quot;r&quot;);
+    if (NULL == fpr)
+    {
+        fprintf(stderr, &quot;Failed to open pid.txt.\n&quot;);
+        return;
+    }
+    while (fgets(buf, 100, fpr) &amp;&amp; (!feof(fpr)))
+    {
+        //分解row
+        len = strlen(buf);
+        buf[len - 1] = 0;
+        size = str_split(buf, delim, rows);
+
+        if (in_array(rows[size - 2], array_pid, i) &lt; 0)
+        {
+            array_pid[i++] = str_new(rows[size - 2]);
+        }
+    }
+    i--;
+    for (; i &gt;= 0; i--)
+    {
+        sprintf_s(buf, 100, &quot;taskkill -PID %s -F&quot;, array_pid[i]);
+        system(buf);
+        free(array_pid[i]);
+    }
+    fclose(fpr);
+    return;
+}
+</code></pre>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/23/hexo/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  hexo
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/23/Laravel/">
+                Laravel
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Been Stone</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

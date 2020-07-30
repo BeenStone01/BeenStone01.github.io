@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		vue笔记 | 
+	 
+	Been&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="my markdown blog" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">Been's Blog</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/BeenStone01" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/C++%E4%BB%A3%E7%A0%81%E6%A0%B7%E4%BE%8B/">
+										C++代码样例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/19/GPIB/">
+										GPIB
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Laravel/">
+										Laravel
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/Linux%E5%9C%A8%E7%BA%BF/">
+										Linux在线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC/">
+										MFC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+										MFC多线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%8C%89%E9%92%AE/">
+										MFC自绘按钮
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%A6%82%E8%BF%B0/">
+										MFC自绘概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/SSDP%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/">
+										SSDP开发说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL_vector/">
+										STL_vector
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL/">
+										STL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinHttp%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinHttp使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinInet%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinInet使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Wininte%E6%A0%B7%E4%BE%8B%E8%A7%A3%E6%9E%90/">
+										Wininte样例解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/XML%E4%B9%8BIXMLHTTPReuest/">
+										XML之IXMLHTTPReuest
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E6%93%8D%E4%BD%9C%E4%B9%8BCMarkUp/">
+										XML操作之CMarkUp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E8%A7%A3%E6%9E%90/">
+										XML解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/c++11/">
+										c++11
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/06/c++%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+										c++小程序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/c-%E6%9C%AA%E5%BD%92%E7%B1%BB%E4%BB%A3%E7%A0%81/">
+										c-未归类代码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/hexo/">
+										hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/socket/">
+										socket
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/thread-2/">
+										thread-2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/thread/">
+										thread
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/04/23/vue%E7%AC%94%E8%AE%B0/">
+										vue笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/webpack%E4%BD%BF%E7%94%A8/">
+										webpack使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/30/%E4%B8%B2%E5%8F%A3com%E7%BC%96%E7%A8%8B/">
+										串口com编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/03/%E5%88%B7%E9%A2%98%E7%BA%AA%E5%BD%95/">
+										刷题纪录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/">
+										字符类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
+										小程序开发笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4/">
+										常用工具命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/">
+										文件读写
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+										编码格式转换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	vue笔记
+</h1>
+<div class="article-meta">
+	
+	<span>Been Stone</span>
+	<span>2020-04-23 17:08:18</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h1><h2 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h2><h3 id="1-创建项目描述文件"><a href="#1-创建项目描述文件" class="headerlink" title="1. 创建项目描述文件"></a>1. 创建项目描述文件</h3><p>创建package.json</p>
+<pre><code class="shell">PS D:\www\toto&gt; npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (toto) webpack
+version: (1.0.0)
+description: webpack init
+entry point: (index.js)
+test command: test
+git repository:
+keywords:
+author: Been
+license: (ISC)
+About to write to D:\www\toto\package.json:
+
+{
+  &quot;name&quot;: &quot;webpack&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;webpack init&quot;,
+  &quot;main&quot;: &quot;main.js&quot;,
+  &quot;dependencies&quot;: {
+    &quot;webpack&quot;: &quot;^4.42.1&quot;
+  },
+  &quot;devDependencies&quot;: {},
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;test&quot;
+  },
+  &quot;author&quot;: &quot;Been&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+
+Is this OK? (yes)</code></pre>
+<h3 id="2-安装webpack"><a href="#2-安装webpack" class="headerlink" title="2. 安装webpack"></a>2. 安装webpack</h3><pre><code class="shell">//全局安装
+PS D:\www\toto&gt; npm install -g webpack
+C:\Users\MI-PC\AppData\Roaming\npm\webpack -&gt; C:\Users\MI-PC\AppData\Roaming\npm\node_modules\webpack\bin\webpack.js
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 (node_modules\webpack\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;} (current: {&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;})    
+
++ webpack@4.42.1
+added 320 packages from 197 contributors in 9.538s
+
+//安装到项目目录
+PS D:\www\toto&gt; npm install webpack -D
+npm WARN rollback Rolling back node-pre-gyp@0.14.0 failed (this is probably harmless): EPERM: operation not permitted, lstat &#39;D:\www\toto\node_modules\fsevents\node_modules&#39;
+npm WARN saveError ENOENT: no such file or directory, open &#39;D:\www\toto\package.json&#39;
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN enoent ENOENT: no such file or directory, open &#39;D:\www\toto\package.json&#39;
+npm WARN toto No description
+npm WARN toto No repository field.
+npm WARN toto No README data
+npm WARN toto No license field.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.12 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.12: wanted {&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;} (current: {&quot;os&quot;:&quot;win32&quot;,&quot;arch&quot;:&quot;x64&quot;})    
+
++ webpack@4.42.1
+added 320 packages from 197 contributors in 8.724s
+
+3 packages are looking for funding
+  run `npm fund` for details</code></pre>
+<h3 id="3-子模块安装命令"><a href="#3-子模块安装命令" class="headerlink" title="3. 子模块安装命令"></a>3. 子模块安装命令</h3><p>npm WARN <a href="mailto:vue-loader@15.9.1">vue-loader@15.9.1</a> requires a peer of css-loader@* but none is installed. You must install peer dependencies yourself.</p>
+<pre><code class="shell">npm install -D css-loader
+npm install -D vue-loader vue-template-compiler
+npm install -D babel-core babel-loader@7 babel-preset-env</code></pre>
+<h3 id="4-新建目录及文件"><a href="#4-新建目录及文件" class="headerlink" title="4. 新建目录及文件"></a>4. 新建目录及文件</h3><p>1). app目录，存放原始数据和javaScript模块<br>2). src目录，存放供浏览器读取的文件（包括webpack打包生成的js文件)<br>3). ./index.html<br>4). ./app/main.js</p>
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><h3 id="监听子组件事件"><a href="#监听子组件事件" class="headerlink" title="监听子组件事件"></a>监听子组件事件</h3><h4 id="1-方法一"><a href="#1-方法一" class="headerlink" title="1. 方法一"></a>1. 方法一</h4><pre><code class="html">&lt;div id=&quot;components-demo&quot;&gt;
+    &lt;div :style=&quot;{fontSize: postFontSize + &#39;em&#39;}&quot;&gt;
+        &lt;blog-post
+        v-for=&quot;post in posts&quot;
+        v-bind:key=&quot;post.id&quot;
+        v-bind:essay=&quot;post&quot;
+        v-on:ces=&quot;enlarge&quot;
+        &gt;&lt;/blog-post&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<pre><code class="js">Vue.component(&#39;blog-post&#39;,{
+    props:[&#39;essay&#39;],
+    template:&#39;\
+    &lt;div class=&quot;blog-post&quot;&gt;\
+        &lt;h3&gt;{{essay.title}}&lt;/h3&gt;\
+        &lt;button v-on:click=&quot;enlargetxt&quot;&gt;Enlarge text&lt;/button&gt;\
+        &lt;div v-html=&quot;essay.content&quot;&gt;&lt;/div&gt;\
+    &lt;/div&gt;&#39;,
+    methods:{
+        enlargetxt:function(event){
+            this.$emit(&#39;ces&#39;);
+            this.$parent.posts[0].title=&#39;cess&#39;;
+        }
+    }
+})
+
+new Vue({
+    el:&#39;#components-demo&#39;,
+    data:{
+        postFontSize:1,
+        posts:[
+            {id:1, title:&#39;ces&#39;, content:&#39;thiesi dsf dfsaljfs&#39;},
+            {id:2, title:&#39;ces2&#39;, content:&#39;thiesi dsf dfsaljfs&#39;}
+        ]
+    },
+    methods:{
+        enlarge:function(){
+            this.postFontSize += 0.1;
+        }
+    }
+})</code></pre>
+<h4 id="2-方法二："><a href="#2-方法二：" class="headerlink" title="2. 方法二："></a>2. 方法二：</h4><pre><code class="html">&lt;div id=&quot;components-demo&quot;&gt;
+    &lt;div :style=&quot;{fontSize: postFontSize + &#39;em&#39;}&quot;&gt;
+        &lt;blog-post
+        v-for=&quot;post in posts&quot;
+        v-bind:key=&quot;post.id&quot;
+        v-bind:essay=&quot;post&quot;
+        v-on:ces=&quot;postFontSize+=0.1&quot;
+        &gt;&lt;/blog-post&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<pre><code class="js">Vue.component(&#39;blog-post&#39;,{
+    props:[&#39;essay&#39;],
+    template:&#39;\
+    &lt;div class=&quot;blog-post&quot;&gt;\
+        &lt;h3&gt;{{essay.title}}&lt;/h3&gt;\
+        &lt;button v-on:click=&quot;$emit(\&#39;ces\&#39;)&quot;&gt;Enlarge text&lt;/button&gt;\
+        &lt;div v-html=&quot;essay.content&quot;&gt;&lt;/div&gt;\
+    &lt;/div&gt;&#39;
+})
+
+new Vue({
+    el:&#39;#components-demo&#39;,
+    data:{
+        postFontSize:1,
+        posts:[
+            {id:1, title:&#39;ces&#39;, content:&#39;thiesi dsf dfsaljfs&#39;},
+            {id:2, title:&#39;ces2&#39;, content:&#39;thiesi dsf dfsaljfs&#39;}
+        ]
+    }
+})</code></pre>
+<h3 id="webpack文件编译"><a href="#webpack文件编译" class="headerlink" title="webpack文件编译"></a>webpack文件编译</h3><h4 id="0-运行命令："><a href="#0-运行命令：" class="headerlink" title="0. 运行命令："></a>0. 运行命令：</h4><pre><code class="shell">D:\www\weixin&gt; node ./build/build.js</code></pre>
+<h4 id="1-编写build-js脚本文件"><a href="#1-编写build-js脚本文件" class="headerlink" title="1. 编写build.js脚本文件"></a>1. 编写build.js脚本文件</h4><p>//app/build/build.js</p>
+<pre><code class="js">const webpack = require(&quot;webpack&quot;);
+const config = require(&quot;../webpack.config&quot;);
+
+const compiler = webpack(config);
+
+const watching = compiler.watch(
+    {
+        aggregateTimeout:300,
+        poll:undefined
+    },(err,stats)=&gt;{
+        if(err||stats.hasErrors()){
+            console.log(stats.toString({
+                colors:true,
+                chunks:false
+            }));
+        }
+        else
+        {
+            console.log(stats.toString({
+                colors:true,
+                chunks:false
+            }));
+        }
+    }
+);</code></pre>
+<h4 id="2-webpack参数配置"><a href="#2-webpack参数配置" class="headerlink" title="2. webpack参数配置"></a>2. webpack参数配置</h4><p>//app/webpack.config.js</p>
+<pre><code class="js">const path = require(&#39;path&#39;);
+const VueLoaderPlugin = require(&#39;vue-loader/lib/plugin&#39;)
+
+module.exports = {
+    mode: &#39;development&#39;,
+    entry:&#39;./src/index.js&#39;,
+
+    resolve:{
+        extensions: [&quot;.js&quot;, &quot;.json&quot;,&#39;.vue&#39;]
+    },
+    output:{
+        path:path.resolve(__dirname,&#39;./static/js&#39;),
+        filename:&#39;common.js&#39;
+    },
+    module:{
+        rules:[
+            //……其他规则
+            {test:/\.vue$/, loader:&#39;vue-loader&#39;},
+            {
+                test:/\.js$/,
+                exclude: /node_modules/, 
+                options:{
+                    presets:[
+                        &#39;babel-preset-env&#39; //使用这个预设，会根据浏览器来选择插件转化ES5
+                    ] 
+                },
+                loader:&#39;babel-loader&#39;
+            },
+            {   
+                test:/\.css$/, 
+                use:[
+                    {loader: &#39;style-loader&#39;},
+                    {
+                        loader:&#39;css-loader&#39;,
+                        options:{modules:true}
+                    }
+                ]
+            }
+        ]
+    },
+    plugins:[
+        //  请确保引入这个插件！
+        new VueLoaderPlugin()
+    ],
+    devtool:&#39;eval&#39;
+};</code></pre>
+<h4 id="3-html前端页面"><a href="#3-html前端页面" class="headerlink" title="3. html前端页面"></a>3. html前端页面</h4><pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;script src=&quot;./static/js/jquery-2.2.3.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;./static/js/bootstrap.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- &lt;script src=&quot;./node_modules/vue/dist/vue.js&quot;&gt;&lt;/script&gt; --&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./static/css/bootstrap.css&quot;&gt;
+    &lt;title&gt;temple&lt;/title&gt;
+    &lt;!-- bootstrap模板 2018年5月17日00:27:03--&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-3 col-md-offset-3&quot; id=&quot;page1&quot;&gt;
+            &lt;div id=&quot;components-demo&quot;&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script src=&quot;./static/js/common.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h4 id="4-js入口文件"><a href="#4-js入口文件" class="headerlink" title="4. js入口文件"></a>4. js入口文件</h4><pre><code class="js">//app/src/index.js
+import VueRouter from &#39;vue-router&#39;
+import Vue from &#39;vue&#39;
+import App from &#39;./app.vue&#39;
+import PageA from &#39;./PageA&#39;
+import PageB from &#39;./PageB&#39;
+Vue.use(VueRouter);
+const router = new VueRouter({
+    routes:[{
+       path:&#39;/a&#39;,
+       component:PageA
+    },/*
+    {
+        path:&#39;/b&#39;,
+        component:PageB
+     },*/{
+       path:&#39;/b/:id&#39;,
+       component:PageB
+    },{
+        path:&#39;/&#39;,
+        redirect:&#39;/a&#39;
+    },{
+        path:&#39;*&#39;,
+        redirect:&#39;/a&#39;
+    }]
+})
+var vue = new Vue({
+    router,
+    el:&#39;#components-demo&#39;,
+
+    render:function(createElement)
+    {
+        return createElement(App);
+    }
+})</code></pre>
+<h4 id="5-路由"><a href="#5-路由" class="headerlink" title="5. 路由"></a>5. 路由</h4><ol>
+<li>引入模块<pre><code class="js">import VueRouter from &#39;vue-router&#39;</code></pre>
+</li>
+<li>使用声明<pre><code class="js">Vue.use(VueRouter);</code></pre>
+</li>
+<li>新建对象<pre><code class="js">const router = new VueRouter({routes:[……]})</code></pre>
+</li>
+<li>Vue对象引入<h4 id="6-单文件组件"><a href="#6-单文件组件" class="headerlink" title="6. 单文件组件"></a>6. 单文件组件</h4>//app/src/app.vue<pre><code class="js">&lt;template&gt;
+ &lt;div :style=&quot;{fontSize: postFontSize + &#39;em&#39;}&quot;&gt;
+     &lt;blog-post
+     v-for=&quot;post in posts&quot;
+     v-bind:key=&quot;post.id&quot;
+     v-bind:essay=&quot;post&quot;
+     v-on:ces=&quot;enlarge&quot;
+     &gt;&lt;/blog-post&gt;
+     &lt;router-view&gt;&lt;/router-view&gt;      //重要！！！
+ &lt;/div&gt;
+</code></pre>
+</li>
+</ol>
+</template>
+
+<script>
+import blogPost from './blogPost.vue'
+
+export default {
+    data:function(){
+        return {
+            postFontSize:1,
+            posts:[
+                {id:1,title:'ces',content:'this is a ces text'},
+                {id:2, title:'ces2',content:'this is other text'}
+            ]
+        }
+    },
+    components:{
+        'blog-post': blogPost
+    },
+    methods:{
+        enlarge(){
+            this.postFontSize += 0.1;
+        }
+    }
+}
+</script>
+<pre><code>#### 7. 子组件
+//app/src/blogPost.vue
+```js
+&lt;template&gt;
+    &lt;div class=&quot;blog-post&quot;&gt;
+        &lt;h3&gt;{{essay.title}}&lt;/h3&gt;
+        &lt;button v-on:click=&quot;enlargetxt&quot;&gt;Enlarge text&lt;/button&gt;
+        &lt;div v-html=&quot;essay.content&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+    props:[&#39;essay&#39;],
+    methods:{
+        enlargetxt:function (event) {
+            this.$emit(&#39;ces&#39;);
+            this.$parent.posts[0].title=&#39;cess&#39;;
+        }
+    }
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+
+&lt;/style&gt;</code></pre><p>//app/src/pageA.vue</p>
+<pre><code class="js">&lt;template&gt;
+    &lt;div&gt; 
+        pageA
+        &lt;a href=&quot;#/b/ssss&quot;&gt;b&lt;/a&gt;
+        &lt;router-link to=&quot;/b&quot;&gt;B&lt;/router-link&gt;
+    &lt;/div&gt;
+&lt;/template&gt;</code></pre>
+<p>//app/src/pageB.vue</p>
+<pre><code class="js">&lt;template&gt;
+    &lt;div&gt; 
+        pageB
+        &lt;a href=&quot;#/a&quot;&gt;a&lt;/a&gt;
+        &lt;router-link to=&quot;/a&quot;&gt;AA&lt;/router-link&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+    created() {
+        console.log(this.$route.params);
+    }
+}
+&lt;/script&gt;</code></pre>
+<h4 id="8-项目描述package-json"><a href="#8-项目描述package-json" class="headerlink" title="8. 项目描述package.json"></a>8. 项目描述package.json</h4><pre><code class="json">{
+  &quot;name&quot;: &quot;weixin&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;dependencies&quot;: {
+    &quot;vue&quot;: &quot;^2.6.11&quot;,
+    &quot;vue-router&quot;: &quot;^3.1.6&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;babel-core&quot;: &quot;^6.26.3&quot;,
+    &quot;babel-loader&quot;: &quot;^7.1.5&quot;,
+    &quot;babel-preset-env&quot;: &quot;^1.7.0&quot;,
+    &quot;vue-loader&quot;: &quot;^15.9.1&quot;,
+    &quot;vue-template-compiler&quot;: &quot;^2.6.11&quot;,
+    &quot;webpack&quot;: &quot;^4.42.1&quot;
+  }
+}</code></pre>
+<h3 id="前后端协同"><a href="#前后端协同" class="headerlink" title="前后端协同"></a>前后端协同</h3><pre><code class="js">//main.js 2020年4月8日
+import Vue from &#39;../static/js/vue&#39;;
+import Axio from &#39;axios&#39;;
+Vue.config.devtools = true;
+
+var vue = new Vue({
+    el:&#39;#app&#39;,
+    data:{
+        thing:&#39;&#39;,
+        alert:&#39;&#39;,
+        items:[],
+    },
+    methods: {
+        submit:function()
+        {
+            if(this.thing)
+            {
+                var item = {thing:this.thing, done:false};
+                var nCount = this.items.length;
+                Vue.set(this.items,nCount,item);
+                //数据库新增
+                var fd = new FormData();
+                fd.append(&#39;user_id&#39;,1);
+                fd.append(&#39;thing&#39;,this.thing);
+                Axio.post(&quot;/php_test/db_manger.php?action=add&amp;user_id=1&quot;,fd).then(res=&gt;{
+                    if(res.data.success)
+                        alert(&quot;添加成功!&quot;);
+                })
+                this.thing = &quot;&quot;;
+            }
+            else
+            {
+                this.alert = &quot;不能为空！&quot;;
+            }
+        }
+    },
+    created() {
+        var vm = this;
+        Axio.get(&quot;/php_test/db_manger.php?action=select&amp;user_id=1&quot;)
+        .then(function(res){
+            if(res.data.success)
+            {
+                vm.items = res.data.data;
+            }
+            // vm.items = res.data;
+            // var data = res.data;
+        })
+    },
+})</code></pre>
+<pre><code class="php">&lt;?php
+session_start();
+$action = $_GET[&#39;action&#39;]?$_GET[&#39;action&#39;]:&quot;select&quot;;
+$user_id = $_GET[&#39;user_id&#39;];
+
+$link = new mysqli(&#39;localhost&#39;,&#39;homestead&#39;,&#39;secret&#39;,&#39;laravel&#39;);
+if(mysqli_connect_errno()){
+    printf(&quot;Failed:&quot;,mysqli_connect_error());
+    exit();
+}
+
+//$sql = &quot;SELECT count(*) FROM staff;&quot;;
+// $sql = &quot;UPDATE staff AS p INNER JOIN edit AS e ON p.staff_number = e.staff_number SET p.tel = e.tel;&quot;;
+switch ($action) {
+    case &#39;add&#39;:
+        {
+            $sql = &quot;insert into todos (thing,user_id) values(&#39;&quot;.$_POST[&#39;thing&#39;].&quot;&#39;,&quot;.$user_id.&quot;);&quot;;
+            $res = $link-&gt;query($sql);
+            $result = array(&#39;success&#39;=&gt;$res);
+            echo json_encode($result);
+        }
+    break;
+    case &#39;update&#39;:
+        {
+            $sql = &quot;update todos set thing=&#39;&quot;.$_POST[&#39;thing&#39;].&quot;&#39; where id = &quot;.$_POST[&#39;id&#39;].&quot;;&quot;;
+        }
+    break;
+    case &#39;select&#39;:
+        {
+            $sql = &quot;select * from todos where user_id = &#39;&quot;.$user_id.&quot;&#39;;&quot;;
+            $result = $link-&gt;query($sql);
+            $rows = array();
+            while ($row = $result-&gt;fetch_assoc()) {
+                $rows[] = $row;
+            }
+            $res = array(&#39;success&#39;=&gt;true,&#39;data&#39;=&gt;$rows);
+            $res = json_encode($res);
+            echo $res;
+        }
+    break;
+    case &#39;delete&#39;:
+        {
+            $sql = &quot;delete from todos where id = &quot;.$_POST[&#39;id&#39;].&quot;;&quot;;
+        }
+    break;
+    default:
+    # code...
+break;
+}
+
+//var_dump($rows);</code></pre>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/23/XML%E8%A7%A3%E6%9E%90/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  XML解析
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/23/webpack%E4%BD%BF%E7%94%A8/">
+                webpack使用
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Been Stone</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

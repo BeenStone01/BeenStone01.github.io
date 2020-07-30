@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		XML之IXMLHTTPReuest | 
+	 
+	Been&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="my markdown blog" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">Been's Blog</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/BeenStone01" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/C++%E4%BB%A3%E7%A0%81%E6%A0%B7%E4%BE%8B/">
+										C++代码样例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/19/GPIB/">
+										GPIB
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Laravel/">
+										Laravel
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/Linux%E5%9C%A8%E7%BA%BF/">
+										Linux在线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC/">
+										MFC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+										MFC多线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%8C%89%E9%92%AE/">
+										MFC自绘按钮
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%A6%82%E8%BF%B0/">
+										MFC自绘概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/SSDP%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/">
+										SSDP开发说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL_vector/">
+										STL_vector
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL/">
+										STL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinHttp%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinHttp使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinInet%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinInet使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Wininte%E6%A0%B7%E4%BE%8B%E8%A7%A3%E6%9E%90/">
+										Wininte样例解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/04/26/XML%E4%B9%8BIXMLHTTPReuest/">
+										XML之IXMLHTTPReuest
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E6%93%8D%E4%BD%9C%E4%B9%8BCMarkUp/">
+										XML操作之CMarkUp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E8%A7%A3%E6%9E%90/">
+										XML解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/c++11/">
+										c++11
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/06/c++%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+										c++小程序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/c-%E6%9C%AA%E5%BD%92%E7%B1%BB%E4%BB%A3%E7%A0%81/">
+										c-未归类代码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/hexo/">
+										hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/socket/">
+										socket
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/thread-2/">
+										thread-2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/thread/">
+										thread
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/vue%E7%AC%94%E8%AE%B0/">
+										vue笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/webpack%E4%BD%BF%E7%94%A8/">
+										webpack使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/30/%E4%B8%B2%E5%8F%A3com%E7%BC%96%E7%A8%8B/">
+										串口com编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/03/%E5%88%B7%E9%A2%98%E7%BA%AA%E5%BD%95/">
+										刷题纪录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/">
+										字符类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
+										小程序开发笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4/">
+										常用工具命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/">
+										文件读写
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+										编码格式转换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	XML之IXMLHTTPReuest
+</h1>
+<div class="article-meta">
+	
+	<span>Been Stone</span>
+	<span>2020-04-26 17:36:47</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="待整理"><a href="#待整理" class="headerlink" title="待整理"></a>待整理</h1><p><a href="https://bbs.csdn.net/topics/310034236" target="_blank" rel="noopener">IXMLHTTPRequest编程</a></p>
+<pre><code class="cpp">IXMLHTTPRequest *pXMLRequest;
+DWORD ErrorCode = S_OK;
+if (FAILED( CoCreateInstance(CLSID_XMLHTTPRequest, NULL, CLSCTX_INPROC_SERVER, 
+   IID_IXMLHTTPRequest, (void**)&amp;pXMLRequest)))
+{
+ErrorCode = GetLastError();
+return ErrorCode;
+}
+
+
+BSTR bUrl = SysAllocString(JavaServerAddress3);
+
+BSTR bMethod = SysAllocString(L&quot;POST&quot;);
+
+VARIANT vAsync;
+vAsync.vt = VT_BOOL;
+vAsync.boolVal = false;
+
+
+BSTR PASSWORD = SysAllocString(L&quot;&quot;);
+VARIANT vp ;
+vp.vt = VT_BSTR;
+vp.bstrVal = PASSWORD;
+
+if (FAILED(pXMLRequest-&gt;open(bMethod, bUrl, vAsync,vp , vp)))
+{
+ErrorCode = GetLastError();
+goto Error;
+}
+VARIANT vBody;
+vBody.vt = VT_BSTR;
+vBody.bstrVal = XmlCmd;
+if (FAILED(pXMLRequest-&gt;send(vBody)))//在此处失败返回的GetlastError为2 {
+ErrorCode = GetLastError();
+goto Error;
+}
+if (pXMLRequest-&gt;get_responseText(XmlResult))
+{
+ErrorCode = GetLastError();
+goto Error;
+}</code></pre>
+<p><a href="https://blog.csdn.net/weixin_34417200/article/details/85414943" target="_blank" rel="noopener">参考来源</a></p>
+<pre><code class="cpp">#include &lt;msxml.h&gt;
+
+IXMLHttpRequest* GetXMLHTTP() {
+    IXMLHttpRequest* request;
+    CoCreateInstance(CLSID_XMLHTTPRequest, NULL, CLSCTX_INPROC, IID_IXMLHttpRequest, reinterpret_cast&lt;void**&gt;(&amp;request));
+    return request;
+}</code></pre>
+<h1 id="二、解析xml"><a href="#二、解析xml" class="headerlink" title="二、解析xml"></a>二、解析xml</h1><h2 id="C-使用MSXML6-0的IXMLDOMDocument接口解析XML文档"><a href="#C-使用MSXML6-0的IXMLDOMDocument接口解析XML文档" class="headerlink" title="C++使用MSXML6.0的IXMLDOMDocument接口解析XML文档"></a><a href="https://blog.csdn.net/ZLK1214/article/details/79978704" target="_blank" rel="noopener">C++使用MSXML6.0的IXMLDOMDocument接口解析XML文档</a></h2><pre><code class="cpp">#include &lt;MsXml6.h&gt;
+#include &lt;stdio.h&gt;
+
+#pragma comment(lib, &quot;msxml6.lib&quot;)
+
+/*
+参考资料:
+  (1) VARIANT结构体: https://msdn.microsoft.com/en-us/library/windows/desktop/dd373687(v=vs.85).aspx
+      VARIANT用于表示一个弱类型的变量
+  (2) BSTR字符串: https://msdn.microsoft.com/en-us/library/windows/desktop/ms221069(v=vs.85).aspx
+      BSTR字符串是用于COM组件对象模型的字符串格式, 字符串以表示字符串长度的4字节整数开始, 然后跟上UTF-16编码的wchar_t字符串（包括\0结束标志）。BSTR类型的变量是一个指针, 指向字符串的第一个字符处
+      例如, 一段起始地址为1000的内存空间, 则1000~1003这四个字节存放字符串的长度, 1004开始才是字符串的真正内容, BSTR变量应指向1004而不是1000
+      wchar_t *用于保存UTF-16编码格式的字符串, printf用%ls输出(不能有中文, 否则会出错)
+      要输出含有中文的wchar_t *字符串, 请使用WriteConsoleW函数
+      char *可以用来保存任意编码格式的字符串, 但只有ANSI格式才能使用printf的%s正确显示出来
+      在简体中文版操作系统下, ANSI就是GBK编码
+      MultiByteToWideChar函数可以将char *字符串转换为wchar_t *字符串
+      WideCharToMultiByte函数可以将wchar_t *字符串转换为char *t字符串
+      SysAllocString函数可以将wchar_t *字符串转换为BSTR字符串
+  (3) IXMLDOMDocument接口: https://msdn.microsoft.com/en-us/library/windows/desktop/dd892951(v=vs.85).aspx
+  (4) 组件对象模型COM: 
+      https://msdn.microsoft.com/en-us/library/windows/desktop/ff485848(v=vs.85).aspx
+      https://msdn.microsoft.com/en-us/library/windows/desktop/ms680573(v=vs.85).aspx
+  (5) Windows窗口程序: https://msdn.microsoft.com/en-us/library/windows/desktop/ff381409(v=vs.85).aspx
+*/
+
+// 显示元素节点的属性值 (元素节点是一种节点)
+void display_attribute(IXMLDOMElement *elem, const wchar_t *name, bool intval = false)
+{
+    BSTR bstr; // 表示一个字符串
+    int num;
+    VARIANT variant; // 表示一个弱类型的变量
+
+    bstr = SysAllocString(name); // 必须用SysAllocString函数把wchar_t *字符串转换成BSTR字符串
+    elem-&gt;getAttribute(bstr, &amp;variant);
+    SysFreeString(bstr); // 使用完字符串后必须释放
+
+    printf(&quot;[Attribute] name=%ls, value=%ls&quot;, name, variant.bstrVal); // BSTR和wchar_t *字符串都用%ls输出
+    if (intval)
+    {
+        num = _wtoi(variant.bstrVal); // 转换为整形
+        printf(&quot;, 2*value=%d&quot;, 2 * num);
+    }
+    printf(&quot;\n&quot;);
+
+    SysFreeString(variant.bstrVal); // 保存在Variant中的BSTR也必须释放掉
+}
+
+// 显示节点名称
+void display_nodename(IXMLDOMNode *node)
+{
+    BSTR bstr;
+    node-&gt;get_nodeName(&amp;bstr);
+    printf(&quot;[Node] name=%ls\n&quot;, bstr); // 使用%ls打印BSTR字符串内容
+    SysFreeString(bstr); // 使用完字符串后必须释放
+}
+
+// 显示节点中的文本内容 (方法一)
+/*
+void display_content(IXMLDOMNode *node)
+{
+    BSTR text;
+    node-&gt;get_text(&amp;text);
+    printf(&quot;[Text] %ls\n&quot;, text);
+    SysFreeString(text);
+}
+*/
+
+// 显示节点中的文本内容 (方法二)
+// 文本内容是文本节点, 是node节点下的子节点
+void display_content(IXMLDOMNode *node)
+{
+    IXMLDOMNode *child;
+    VARIANT value;
+    node-&gt;get_firstChild(&amp;child); // 获取文本节点
+    child-&gt;get_nodeValue(&amp;value); // 得到文本节点的内容
+    printf(&quot;[Text] %ls\n&quot;, value.bstrVal);
+
+    SysFreeString(value.bstrVal);
+    child-&gt;Release();
+}
+
+// 获取节点中的XML文本内容
+void display_inner_xml(IXMLDOMNode *node)
+{
+    BSTR bstr;
+    node-&gt;get_xml(&amp;bstr);
+    printf(&quot;[InnerXML] %ls\n&quot;, bstr);
+    SysFreeString(bstr);
+}
+
+void read_xml(IXMLDOMDocument *pDoc)
+{
+    // 根节点
+    IXMLDOMElement *root;
+    pDoc-&gt;get_documentElement(&amp;root);
+    display_nodename(root);
+    display_attribute(root, L&quot;id&quot;, true);
+    display_inner_xml(root);
+    printf(&quot;\n&quot;);
+
+    // 根节点下的子节点
+    IXMLDOMNodeList *list;
+    long i, len;
+    root-&gt;get_childNodes(&amp;list);
+    list-&gt;get_length(&amp;len);
+    for (i = 0; i &lt; len; i++)
+    {
+        IXMLDOMNode *item;
+        list-&gt;get_item(i, &amp;item);
+        display_nodename(item);
+        display_content(item);
+
+        // 只有元素节点才有属性节点, 所以获取属性前要进行类型转换, 把node变为element node
+        IXMLDOMElement *elem;
+        item-&gt;QueryInterface(&amp;elem);
+        display_attribute(elem, L&quot;name&quot;);
+        elem-&gt;Release();
+
+        item-&gt;Release();
+        printf(&quot;\n&quot;);
+    }
+    list-&gt;Release();
+
+    root-&gt;Release();
+}
+
+// 打开XML文件
+void open_xml(const wchar_t *name)
+{
+    HRESULT hr;
+    IXMLDOMDocument *pDoc;
+    hr = CoCreateInstance(CLSID_DOMDocument60, NULL, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&amp;pDoc));
+    if (SUCCEEDED(hr))
+    {
+        VARIANT filename;
+        VARIANT_BOOL flag;
+
+        filename.bstrVal = SysAllocString(name); // 将wchar_t *转换为BSTR
+        filename.vt = VT_BSTR;
+        pDoc-&gt;load(filename, &amp;flag);
+        SysFreeString(filename.bstrVal);
+        if (flag == VARIANT_TRUE)
+        {
+            printf(&quot;Load succeeded!\n&quot;);
+            read_xml(pDoc);
+        }
+        else
+            printf(&quot;Load failed!\n&quot;);
+
+        pDoc-&gt;Release();
+    }
+}
+
+int main(void)
+{
+    CoInitializeEx(NULL, COINIT_APARTMENTTHREADED | COINIT_DISABLE_OLE1DDE); // 初始化COM组件对象模型
+
+    open_xml(L&quot;data.xml&quot;);
+
+    CoUninitialize();
+    return 0;
+}</code></pre>
+<p>xml源文件</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+    &lt;data id=&quot;105&quot;&gt;
+        &lt;book name=&quot;haha&quot;&gt;abcd&lt;/book&gt;
+        &lt;book name=&quot;hoho&quot;&gt;efgh&lt;/book&gt;
+    &lt;/data&gt;</code></pre>
+<p>运行结果</p>
+<pre><code class="bash">Load succeeded!
+[Node] name=data
+[Attribute] name=id, value=105, 2*value=210
+[InnerXML] &lt;data id=&quot;105&quot;&gt;&lt;book name=&quot;haha&quot;&gt;abcd&lt;/book&gt;&lt;book name=&quot;hoho&quot;&gt;efgh&lt;/b
+ook&gt;&lt;/data&gt;
+
+[Node] name=book
+[Text] abcd
+[Attribute] name=name, value=haha
+
+[Node] name=book
+[Text] efgh
+[Attribute] name=name, value=hoho
+
+Press any key to continue . . .</code></pre>
+<p><a href="https://blog.csdn.net/chace1130/article/details/105606875" target="_blank" rel="noopener">msxml6 C++</a></p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/29/MFC/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  MFC
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/26/c-%E6%9C%AA%E5%BD%92%E7%B1%BB%E4%BB%A3%E7%A0%81/">
+                c-未归类代码
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Been Stone</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

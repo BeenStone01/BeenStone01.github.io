@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		MFC自绘按钮 | 
+	 
+	Been&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="my markdown blog" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">Been's Blog</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/BeenStone01" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/C++%E4%BB%A3%E7%A0%81%E6%A0%B7%E4%BE%8B/">
+										C++代码样例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/19/GPIB/">
+										GPIB
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Laravel/">
+										Laravel
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/Linux%E5%9C%A8%E7%BA%BF/">
+										Linux在线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC/">
+										MFC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+										MFC多线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%8C%89%E9%92%AE/">
+										MFC自绘按钮
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%A6%82%E8%BF%B0/">
+										MFC自绘概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/SSDP%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/">
+										SSDP开发说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL_vector/">
+										STL_vector
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL/">
+										STL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinHttp%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinHttp使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinInet%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinInet使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Wininte%E6%A0%B7%E4%BE%8B%E8%A7%A3%E6%9E%90/">
+										Wininte样例解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/XML%E4%B9%8BIXMLHTTPReuest/">
+										XML之IXMLHTTPReuest
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E6%93%8D%E4%BD%9C%E4%B9%8BCMarkUp/">
+										XML操作之CMarkUp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E8%A7%A3%E6%9E%90/">
+										XML解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/c++11/">
+										c++11
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/06/c++%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+										c++小程序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/c-%E6%9C%AA%E5%BD%92%E7%B1%BB%E4%BB%A3%E7%A0%81/">
+										c-未归类代码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/hexo/">
+										hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/socket/">
+										socket
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/thread-2/">
+										thread-2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/thread/">
+										thread
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/vue%E7%AC%94%E8%AE%B0/">
+										vue笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/webpack%E4%BD%BF%E7%94%A8/">
+										webpack使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/30/%E4%B8%B2%E5%8F%A3com%E7%BC%96%E7%A8%8B/">
+										串口com编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/03/%E5%88%B7%E9%A2%98%E7%BA%AA%E5%BD%95/">
+										刷题纪录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/">
+										字符类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
+										小程序开发笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4/">
+										常用工具命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/">
+										文件读写
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+										编码格式转换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	MFC自绘按钮
+</h1>
+<div class="article-meta">
+	
+	<span>Been Stone</span>
+	<span>2020-04-23 17:08:18</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="自绘按钮的两种形式"><a href="#自绘按钮的两种形式" class="headerlink" title="自绘按钮的两种形式"></a>自绘按钮的两种形式</h2><h3 id="1-窗口直接自绘"><a href="#1-窗口直接自绘" class="headerlink" title="1. 窗口直接自绘"></a>1. 窗口直接自绘</h3><pre><code class="cpp">//按钮区域检测
+void CMFCDlg::OnMouseMove(UINT nFlags, CPoint point)
+{
+    CRect rect;
+    CWnd* pWnd = GetDlgItem(IDC_BTN_BMP);
+    pWnd-&gt;GetWindowRect(rect);
+    this-&gt;ScreenToClient(rect);
+    CString str;
+    str.Format(_T(&quot;x = %d, y = %d, rect: %d, %d&quot;), point.x, point.y, rect.left, rect.top);
+    SetWindowText(str);
+
+    CDialogEx::OnMouseMove(nFlags, point);
+}
+
+void CMFCDlg::OnDrawItem(int nIDCtl, LPDRAWITEMSTRUCT lpDIS)
+{
+    switch (nIDCtl)
+    {
+    case IDOK:
+        SetIconBtn(IDOK, IDI_ICON_OK, lpDIS);
+        break;
+    case IDCANCEL:
+        SetIconBtn(IDCANCEL, IDI_ICON_CANCEL,lpDIS);
+        break;
+    case IDC_BTN_BMP:
+        UINT nIDbmp[3] = { IDB_BMP1,IDB_BMP2,IDB_BMP3 };
+        SetBmpBtn(IDC_BTN_BMP, nIDbmp, lpDIS);
+        break;
+    }
+    CDialogEx::OnDrawItem(nIDCtl, lpDIS);
+}
+
+void CMFCDlg::SetIconBtn(UINT nIDCtl, UINT nIDIcon, LPDRAWITEMSTRUCT lpDIS)
+{
+    CDC dc;
+    dc.Attach(lpDIS-&gt;hDC);
+    HICON hIcon = theApp.LoadIcon(nIDIcon);
+    CRect rect;
+    GetDlgItem(nIDCtl)-&gt;GetClientRect(rect);
+    if (!mdc.GetSafeHdc())
+        mdc.Create(rect.Width(), rect.Height());
+    mdc.SelectStockObject(WHITE_BRUSH);
+    mdc.Rectangle(rect);
+    if (lpDIS-&gt;itemState &amp; ODS_SELECTED)
+        rect.OffsetRect(1, 1);
+    int x = rect.left + (rect.Height() - 32) / 2, y = x;
+    mdc.DrawIcon(x, y, hIcon);
+    CString str;
+    GetDlgItemText(nIDCtl, str);
+    rect.left += 40 + x * 2;
+    mdc.DrawText(str, rect, DT_VCENTER | DT_SINGLELINE);
+    dc.BitBlt(0, 0, lpDIS-&gt;rcItem.right, lpDIS-&gt;rcItem.bottom, &amp;mdc, 0, 0, SRCCOPY);
+    dc.Detach();
+}
+
+void CMFCDlg::SetBmpBtn(UINT nIDCtl, UINT nIDBmp[3], LPDRAWITEMSTRUCT lpDIS)
+{
+    CDC* pDC = CDC::FromHandle(lpDIS-&gt;hDC);
+    CWnd* pWnd = GetDlgItem(nIDCtl);
+    CRect rect(lpDIS-&gt;rcItem);
+
+    if(!m_dcNormal.GetSafeHdc())
+    m_dcNormal.LoadBitmap(nIDBmp[0]);
+    if(!m_dcSelect.GetSafeHdc())
+    m_dcSelect.LoadBitmap(nIDBmp[1]);
+    if(!m_dcTrack.GetSafeHdc())
+    m_dcTrack.LoadBitmap(nIDBmp[2]);
+
+    if (rect.Width() != m_dcNormal.Width() || rect.Height() != m_dcNormal.Height())
+    {
+        pWnd-&gt;SetWindowPos(this, 0, 0, m_dcNormal.Width(), m_dcNormal.Height(), SWP_NOMOVE|SWP_NOZORDER);
+        pWnd-&gt;GetClientRect(rect);
+    }
+    if (lpDIS-&gt;itemState &amp; ODS_SELECTED)
+    {
+        pDC-&gt;BitBlt(0, 0, m_dcSelect.Width(), m_dcSelect.Height(), &amp;m_dcSelect, 0, 0, SRCCOPY);
+    }
+    else
+    {
+        if(m_bBtnBmp)
+            pDC-&gt;BitBlt(0, 0, m_dcTrack.Width(), m_dcTrack.Height(), &amp;m_dcTrack, 0, 0, SRCCOPY);
+        else
+            pDC-&gt;BitBlt(0, 0, m_dcNormal.Width(), m_dcNormal.Height(), &amp;m_dcNormal, 0, 0, SRCCOPY);
+    }
+    //因为当鼠标移动到控件上时，无法实时记录坐标点，所以没有找到解决办法2020年2月8日16点19分
+}
+
+BOOL CMFCDlg::OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message)
+{
+    HCURSOR hCursor = theApp.LoadStandardCursor(IDC_HAND);
+    HCURSOR hCursor2 = theApp.LoadStandardCursor(IDC_ARROW);
+    CWnd* pBtn = GetDlgItem(IDC_BTN_BMP);
+    BOOL bTrack = FALSE;
+    if (pBtn == pWnd)
+    {
+        SetCursor(hCursor);    
+        bTrack = TRUE;
+    }
+    else
+    {
+        SetCursor(hCursor2);
+        bTrack = FALSE;
+    }
+    if (m_bBtnBmp != bTrack)
+    {
+        m_bBtnBmp = bTrack;
+        Invalidate(FALSE);
+    }
+
+    return TRUE;
+    return CDialogEx::OnSetCursor(pWnd, nHitTest, message);
+}</code></pre>
+<h3 id="2-自绘类"><a href="#2-自绘类" class="headerlink" title="2. 自绘类"></a>2. 自绘类</h3><h4 id="CBtnBmpLx-h"><a href="#CBtnBmpLx-h" class="headerlink" title="CBtnBmpLx.h"></a>CBtnBmpLx.h</h4><pre><code class="cpp">#pragma once
+
+// CBtnBmpLx
+#include &quot;CMemoryDC.h&quot;
+
+class CBtnBmpLx : public CButton
+{
+    DECLARE_DYNAMIC(CBtnBmpLx)
+
+public:
+    CMemoryDC m_dcNormal, m_dcSelect, m_dcTrack;
+    BOOL m_bTrack;
+    //HICON m_hIcon;
+    CBtnBmpLx();
+    virtual ~CBtnBmpLx();
+    virtual void DrawItem(LPDRAWITEMSTRUCT lpDIS);
+    /*void SetIcon(HICON hIcon)
+    {
+        m_hIcon = hIcon;
+    }*/
+protected:
+    DECLARE_MESSAGE_MAP()
+public:
+    afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+    void SetBmpBtn(int nNormal, int nSelect, int nTrack = -1);
+    afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+};</code></pre>
+<h4 id="CBtnBmpLx-cpp"><a href="#CBtnBmpLx-cpp" class="headerlink" title="CBtnBmpLx.cpp"></a>CBtnBmpLx.cpp</h4><pre><code class="cpp">
+#include &quot;pch.h&quot;
+#include &quot;MFC.h&quot;
+#include &quot;CBtnBmpLx.h&quot;
+
+// CIconBtnLx
+
+IMPLEMENT_DYNAMIC(CBtnBmpLx, CButton)
+
+CBtnBmpLx::CBtnBmpLx()
+{
+    m_bTrack = FALSE;
+}
+
+CBtnBmpLx::~CBtnBmpLx()
+{
+}
+
+void CBtnBmpLx::DrawItem(LPDRAWITEMSTRUCT lpDIS)
+{
+    CDC* pDC = CDC::FromHandle(lpDIS-&gt;hDC);
+    CRect rect(lpDIS-&gt;rcItem);
+    CMemoryDC mdc(rect.Width(),rect.Height(),pDC);
+    mdc.FillSolidRect(rect, m_clBack);
+    //pDC-&gt;BitBlt(0, 0, mdc.Width(), mdc.Height(), &amp;mdc, 0, 0, SRCCOPY);
+    if (rect.Width() != m_dcNormal.Width() || rect.Height() != m_dcNormal.Height())
+    {
+        SetWindowPos(NULL, 0, 0, m_dcNormal.Width(), m_dcNormal.Height(), SWP_NOMOVE | SWP_NOZORDER);
+        GetClientRect(rect);
+    }
+
+    if (lpDIS-&gt;itemState &amp; ODS_SELECTED)
+    {
+        m_dcSelect.BitTrans(0, 0, mdc.Width(), mdc.Height(), &amp;mdc, 0, 0, RGB(255, 255, 255));
+        pDC-&gt;BitBlt(0, 0, m_dcSelect.Width(), m_dcSelect.Height(), &amp;mdc, 0, 0, SRCCOPY);
+    }
+    else
+    {
+        if (m_dcTrack)
+        {
+            //CPoint point;
+            //GetCursorPos(&amp;point);
+            //ScreenToClient(&amp;point);
+            if (m_bTrack)
+            {
+                m_dcTrack.BitTrans(0, 0, mdc.Width(), mdc.Height(), &amp;mdc, 0, 0, RGB(255, 255, 255));
+                pDC-&gt;BitBlt(0, 0, m_dcTrack.Width(), m_dcTrack.Height(), &amp;mdc, 0, 0, SRCCOPY);
+            }
+            else
+            {
+                m_dcNormal.BitTrans(0, 0, mdc.Width(), mdc.Height(), &amp;mdc, 0, 0, RGB(255, 255, 255));
+                pDC-&gt;BitBlt(0, 0, m_dcNormal.Width(), m_dcNormal.Height(), &amp;mdc, 0, 0, SRCCOPY);
+            }
+            return;
+        }
+        m_dcNormal.BitTrans(0, 0, mdc.Width(), mdc.Height(), &amp;mdc, 0, 0, RGB(255, 255, 255));
+        pDC-&gt;BitBlt(0, 0, m_dcNormal.Width(), m_dcNormal.Height(), &amp;mdc, 0, 0, SRCCOPY);
+    }
+
+}
+
+
+BEGIN_MESSAGE_MAP(CBtnBmpLx, CButton)
+    ON_WM_MOUSEMOVE()
+END_MESSAGE_MAP()
+
+
+
+// CIconBtnLx 消息处理程序
+
+int CBtnBmpLx::OnCreate(LPCREATESTRUCT lpCreateStruct)
+{
+    if (CButton::OnCreate(lpCreateStruct) == -1)
+        return -1;
+
+    return 0;
+}
+
+
+void CBtnBmpLx::SetBmpBtn(int nNormal, int nSelect, int nTrack)
+{
+    m_dcNormal.LoadBitmap(nNormal);
+    m_dcSelect.LoadBitmap(nSelect);
+    if (-1 == nTrack)
+        return;
+    m_dcTrack.LoadBitmap(nTrack);
+}
+
+
+void CBtnBmpLx::OnMouseMove(UINT nFlags, CPoint point)
+{
+    CRect rect;
+    GetClientRect(rect);
+    CDC* pDC = GetWindowDC();
+    BOOL bTrack = FALSE;
+    if(rect.PtInRect(point))
+    {
+        bTrack = TRUE;
+        pDC-&gt;BitBlt(0, 0, m_dcTrack.Width(), m_dcTrack.Height(), &amp;m_dcTrack, 0, 0, SRCCOPY);
+        if (GetCapture() != this)
+            SetCapture();
+    }
+    else
+    {
+        ReleaseCapture();
+    }
+    if (bTrack != m_bTrack)
+    {
+        m_bTrack = bTrack;
+        Invalidate(FALSE);
+    }
+}</code></pre>
+<h4 id="CBitIconLx-h"><a href="#CBitIconLx-h" class="headerlink" title="CBitIconLx.h"></a>CBitIconLx.h</h4><pre><code class="cpp">#pragma once
+
+// CIconBtnLx
+#include &quot;CMemoryDC.h&quot;
+
+class CBtnIconLx : public CButton
+{
+    DECLARE_DYNAMIC(CBtnIconLx)
+
+public:
+    HICON m_hIcon;
+    CBtnIconLx();
+    virtual ~CBtnIconLx();
+    virtual void DrawItem(LPDRAWITEMSTRUCT lpDIS);
+    void SetIcon(HICON hIcon)
+    {
+        m_hIcon = hIcon;
+    }
+protected:
+    DECLARE_MESSAGE_MAP()
+public:
+    CMemoryDC m_dc;
+    afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+};
+</code></pre>
+<h4 id="CBitIconLx-cpp"><a href="#CBitIconLx-cpp" class="headerlink" title="CBitIconLx.cpp"></a>CBitIconLx.cpp</h4><pre><code class="cpp">// CIconBtnLx.cpp: 实现文件
+//
+
+#include &quot;pch.h&quot;
+#include &quot;MFC.h&quot;
+#include &quot;CBtnIconLx.h&quot;
+
+
+// CIconBtnLx
+
+IMPLEMENT_DYNAMIC(CBtnIconLx, CButton)
+
+CBtnIconLx::CBtnIconLx()
+{
+    m_hIcon = NULL;
+}
+
+CBtnIconLx::~CBtnIconLx()
+{
+}
+
+void CBtnIconLx::DrawItem(LPDRAWITEMSTRUCT lpDIS)
+{
+    CDC dc;
+    dc.Attach(lpDIS-&gt;hDC);
+    //CDC* pDC = CDC::FromHandle(lpDIS-&gt;hDC);
+    CRect rect(lpDIS-&gt;rcItem);
+    if(!m_dc.GetSafeHdc())
+        m_dc.Create(rect.Width(),rect.Height(),&amp;dc);
+    m_dc.SelectStockObject(WHITE_BRUSH);
+    m_dc.Rectangle(&amp;lpDIS-&gt;rcItem);
+    if(lpDIS-&gt;itemState &amp; ODS_SELECTED)
+        rect.OffsetRect(1,1);
+    m_dc.SelectObject(dc.GetCurrentFont());
+    int x = rect.left + (rect.Height() - 32)/2, y = x;
+    m_dc.DrawIcon(x, y, m_hIcon);
+    CString str;
+    this-&gt;GetWindowText(str);
+    rect.left += 32 + x * 2;
+    m_dc.DrawText(str, rect, DT_VCENTER | DT_SINGLELINE);
+    dc.BitBlt(0,0,lpDIS-&gt;rcItem.right,lpDIS-&gt;rcItem.bottom,&amp;m_dc,0,0,SRCCOPY);
+    dc.Detach();
+}
+
+
+BEGIN_MESSAGE_MAP(CBtnIconLx, CButton)
+    ON_WM_CREATE()
+END_MESSAGE_MAP()
+
+// CIconBtnLx 消息处理程序
+
+int CBtnIconLx::OnCreate(LPCREATESTRUCT lpCreateStruct)
+{
+    if (CButton::OnCreate(lpCreateStruct) == -1)
+        return -1;
+
+    return 0;
+}
+</code></pre>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/23/Laravel/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  Laravel
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%A6%82%E8%BF%B0/">
+                MFC自绘概述
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Been Stone</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		WinInet样例解析 | 
+	 
+	Been&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="my markdown blog" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">Been's Blog</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/BeenStone01" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/C++%E4%BB%A3%E7%A0%81%E6%A0%B7%E4%BE%8B/">
+										C++代码样例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/19/GPIB/">
+										GPIB
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Laravel/">
+										Laravel
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/Linux%E5%9C%A8%E7%BA%BF/">
+										Linux在线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC/">
+										MFC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+										MFC多线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%8C%89%E9%92%AE/">
+										MFC自绘按钮
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%A6%82%E8%BF%B0/">
+										MFC自绘概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/SSDP%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/">
+										SSDP开发说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL_vector/">
+										STL_vector
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL/">
+										STL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinHttp%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinHttp使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinInet%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinInet使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/04/23/Wininte%E6%A0%B7%E4%BE%8B%E8%A7%A3%E6%9E%90/">
+										Wininte样例解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/XML%E4%B9%8BIXMLHTTPReuest/">
+										XML之IXMLHTTPReuest
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E6%93%8D%E4%BD%9C%E4%B9%8BCMarkUp/">
+										XML操作之CMarkUp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E8%A7%A3%E6%9E%90/">
+										XML解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/c++11/">
+										c++11
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/06/c++%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+										c++小程序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/c-%E6%9C%AA%E5%BD%92%E7%B1%BB%E4%BB%A3%E7%A0%81/">
+										c-未归类代码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/hexo/">
+										hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/socket/">
+										socket
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/thread-2/">
+										thread-2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/thread/">
+										thread
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/vue%E7%AC%94%E8%AE%B0/">
+										vue笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/webpack%E4%BD%BF%E7%94%A8/">
+										webpack使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/30/%E4%B8%B2%E5%8F%A3com%E7%BC%96%E7%A8%8B/">
+										串口com编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/03/%E5%88%B7%E9%A2%98%E7%BA%AA%E5%BD%95/">
+										刷题纪录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/">
+										字符类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
+										小程序开发笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4/">
+										常用工具命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/">
+										文件读写
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+										编码格式转换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	Wininte样例解析
+</h1>
+<div class="article-meta">
+	
+	<span>Been Stone</span>
+	<span>2020-04-23 17:08:18</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="样例1"><a href="#样例1" class="headerlink" title="样例1"></a>样例1</h1><pre><code class="cpp">/*
+    标准库，Unicode和多字节皆可，MDd和MTd皆可
+*/
+
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string&gt;
+
+#define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
+#include &lt;atlbase.h&gt;
+#include &lt;atlstr.h&gt;
+
+#define USE_WINHTTP    //Comment this line to user wininet.
+#ifdef USE_WINHTTP
+#include &lt;winhttp.h&gt;
+#pragma comment(lib, &quot;winhttp.lib&quot;)
+#else
+#include &lt;wininet.h&gt;
+#pragma comment(lib, &quot;wininet.lib&quot;)
+#endif
+#define BUF_SIZE    (1024)
+
+CStringW GetStringWFromUtf8(const std::string&amp; str)
+{
+    int len = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), int(str.length()), 0, 0);
+
+    CStringW buf;
+    WCHAR* dd = buf.GetBuffer(len);
+
+    len = MultiByteToWideChar(CP_UTF8, 0, str.c_str(), int(str.length()), dd, len);
+
+    buf.ReleaseBuffer(len);
+
+    return buf;
+}
+
+// CrackedUrl
+class CrackedUrl {
+    int m_scheme;
+    CStringW m_host;
+    int m_port;
+    CStringW m_path;
+public:
+    CrackedUrl(LPCWSTR url)
+    {
+        URL_COMPONENTS uc = { 0 };
+        uc.dwStructSize = sizeof(uc);
+
+        const DWORD BUF_LEN = 256;
+
+        WCHAR host[BUF_LEN];
+        uc.lpszHostName = host;
+        uc.dwHostNameLength = BUF_LEN;
+
+        WCHAR path[BUF_LEN];
+        uc.lpszUrlPath = path;
+        uc.dwUrlPathLength = BUF_LEN;
+
+        WCHAR extra[BUF_LEN];
+        uc.lpszExtraInfo = extra;
+        uc.dwExtraInfoLength = BUF_LEN;
+
+#ifdef USE_WINHTTP
+        if (!WinHttpCrackUrl(url, 0, ICU_ESCAPE, &amp;uc)) {
+            printf(&quot;Error:WinHttpCrackUrl failed!\n&quot;);
+        }
+
+#else
+        if (!InternetCrackUrl(url, 0, ICU_ESCAPE, &amp;uc)) {
+            printf(&quot;Error:InternetCrackUrl failed!\n&quot;);
+        }
+#endif
+        m_scheme = uc.nScheme;
+        m_host = host;
+        m_port = uc.nPort;
+        m_path = path;
+    }
+
+    int GetScheme() const
+    {
+        return m_scheme;
+    }
+
+    LPCWSTR GetHostName() const
+    {
+        return m_host;
+    }
+
+    int GetPort() const
+    {
+        return m_port;
+    }
+
+    LPCWSTR GetPath() const
+    {
+        return m_path;
+    }
+
+    static CStringA UrlEncode(const char* p)
+    {
+        if (p == 0) {
+            return CStringA();
+        }
+
+        CStringA buf;
+
+        for (;;) {
+            int ch = (BYTE)(*(p++));
+            if (ch == &#39;\0&#39;) {
+                break;
+            }
+
+            if (isalnum(ch) || ch == &#39;_&#39; || ch == &#39;-&#39; || ch == &#39;.&#39;) {
+                buf += (char)ch;
+            }
+            else if (ch == &#39; &#39;) {
+                buf += &#39;+&#39;;
+            }
+            else {
+                char c[16];
+                wsprintfA(c, &quot;%%%02X&quot;, ch);
+                buf += c;
+            }
+        }
+
+        return buf;
+    }
+};
+
+// CrackedUrl
+HINTERNET OpenSession(LPCWSTR userAgent = 0)
+{
+#ifdef USE_WINHTTP
+    return WinHttpOpen(userAgent, NULL, NULL, NULL, NULL);;
+#else
+    return InternetOpen(userAgent, INTERNET_OPEN_TYPE_PRECONFIG, NULL, NULL, 0);
+#endif
+}
+
+HINTERNET Connect(HINTERNET hSession, LPCWSTR serverAddr, int portNo)
+{
+#ifdef USE_WINHTTP
+    return WinHttpConnect(hSession, serverAddr, (INTERNET_PORT)portNo, 0);
+#else
+    return InternetConnect(hSession, serverAddr, portNo, NULL, NULL, INTERNET_SERVICE_HTTP, 0, 0);
+#endif
+}
+
+HINTERNET OpenRequest(HINTERNET hConnect, LPCWSTR verb, LPCWSTR objectName, int scheme)
+{
+    DWORD flags = 0;
+#ifdef USE_WINHTTP
+    if (scheme == INTERNET_SCHEME_HTTPS) {
+        flags |= WINHTTP_FLAG_SECURE;
+    }
+
+    return WinHttpOpenRequest(hConnect, verb, objectName, NULL, NULL, NULL, flags);
+
+#else
+    if (scheme == INTERNET_SCHEME_HTTPS) {
+        flags |= INTERNET_FLAG_SECURE;
+    }
+
+    return HttpOpenRequest(hConnect, verb, objectName, NULL, NULL, NULL, flags, 0);
+#endif
+}
+
+BOOL AddRequestHeaders(HINTERNET hRequest, LPCWSTR header)
+{
+    SIZE_T len = lstrlenW(header);
+#ifdef USE_WINHTTP
+    return WinHttpAddRequestHeaders(hRequest, header, DWORD(len), WINHTTP_ADDREQ_FLAG_ADD);
+#else
+    return HttpAddRequestHeaders(hRequest, header, DWORD(len), HTTP_ADDREQ_FLAG_ADD);
+#endif
+}
+
+BOOL SendRequest(HINTERNET hRequest, const void* body, DWORD size)
+{
+#ifdef USE_WINHTTP
+    return WinHttpSendRequest(hRequest, 0, 0, const_cast&lt;void*&gt;(body), size, size, 0);
+#else
+    return HttpSendRequest(hRequest, 0, 0, const_cast&lt;void*&gt;(body), size);
+#endif
+}
+
+BOOL EndRequest(HINTERNET hRequest)
+{
+#ifdef USE_WINHTTP
+    return WinHttpReceiveResponse(hRequest, 0);
+#else
+    // if you use HttpSendRequestEx to send request then use HttpEndRequest in here!
+    return TRUE;
+#endif
+}
+
+BOOL QueryInfo(HINTERNET hRequest, int queryId, char* szBuf, DWORD* pdwSize)
+{
+#ifdef USE_WINHTTP
+    return WinHttpQueryHeaders(hRequest, (DWORD)queryId, 0, szBuf, pdwSize, 0);
+#else
+    return HttpQueryInfo(hRequest, queryId, szBuf, pdwSize, 0);
+#endif
+}
+
+BOOL ReadData(HINTERNET hRequest, void* buffer, DWORD length, DWORD* cbRead)
+{
+#ifdef USE_WINHTTP
+    return WinHttpReadData(hRequest, buffer, length, cbRead);
+#else
+    return InternetReadFile(hRequest, buffer, length, cbRead);
+#endif
+}
+
+void CloseInternetHandle(HINTERNET hInternet)
+{
+    if (hInternet)
+    {
+#ifdef USE_WINHTTP
+        WinHttpCloseHandle(hInternet);
+#else
+        InternetCloseHandle(hInternet);
+#endif
+    }
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    HINTERNET hSession = 0;
+    HINTERNET hConnect = 0;
+    HINTERNET hRequest = 0;
+    CStringW strHeader(L&quot;Content-Type:text/xml; charset=\&quot;utf-8\&quot;&quot;);
+    CStringW strHeader2;
+    CStringA strPostData;
+
+    enum eAction{ Set,Play,Pause,Stop};
+
+    eAction Action = eAction::Play;
+    switch (Action)
+    {
+    case Play:
+        strHeader2 = L&quot;SOAPAction:\&quot;urn:schemas-upnp-org:service:AVTransport:1#Play\&quot;&quot;;
+        strPostData = &quot;&lt;?xml version=\&quot;1.0\&quot;?&gt;\r\n\
+&lt;s:Envelope xmlns:s=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot; s:encodingStyle=\&quot;http://schemas.xmlsoap.org/soap/encoding/\&quot;&gt;\r\n\
+&lt;s:Body&gt;\r\n\
+&lt;u:Play xmlns:u=\&quot;urn:schemas-upnp-org:service:AVTransport:1\&quot;&gt;\r\n\
+&lt;InstanceID&gt;0&lt;/InstanceID&gt;\r\n\
+&lt;Speed&gt;1&lt;/Speed&gt;\r\n\
+&lt;/u:Play&gt;\r\n\
+&lt;/s:Body&gt;\r\n\
+&lt;/s:Envelope&gt;\r\n&quot;;
+        break;
+    case Pause:
+        strHeader2 = L&quot;SOAPAction : \&quot;urn:schemas-upnp-org:service:AVTransport:1#Pause\&quot;&quot;;
+        strPostData = &quot;&lt;?xml version=\&quot;1.0\&quot;?&gt;\r\n\
+&lt;s:Envelope xmlns:s=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot; s:encodingStyle=\&quot;http://schemas.xmlsoap.org/soap/encoding/\&quot;&gt;\r\n\
+&lt;s:Body&gt;\r\n\
+&lt;u:Pause xmlns:u=\&quot;urn:schemas-upnp-org:service:AVTransport:1\&quot;&gt;\r\n\
+&lt;InstanceID&gt;0&lt;/InstanceID&gt;\r\n\
+&lt;/u:Pause&gt;\r\n\
+&lt;/s:Body&gt;\r\n\
+&lt;/s:Envelope&gt;\r\n&quot;;
+        break;
+    case Stop:
+        strHeader2 = L&quot;SOAPAction:\&quot;urn:schemas-upnp-org:service:AVTransport:1#Stop\&quot;&quot;;
+        strPostData = &quot;&lt;?xml version=\&quot;1.0\&quot;?&gt;\r\n\
+&lt;s:Envelope xmlns:s=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot; s:encodingStyle=\&quot;http://schemas.xmlsoap.org/soap/encoding/\&quot;&gt;\r\n\
+&lt;s:Body&gt;\r\n\
+&lt;u:Stop xmlns:u=\&quot;urn:schemas-upnp-org:service:AVTransport:1\&quot;&gt;\r\n\
+&lt;InstanceID&gt;0&lt;/InstanceID&gt;\r\n\
+&lt;/u:Stop&gt;\r\n\
+&lt;/s:Body&gt;\r\n\
+&lt;/s:Envelope&gt;\r\n&quot;;
+        break;
+    default:
+        strHeader2 = L&quot;SOAPAction:\&quot;urn:schemas-upnp-org:service:AVTransport:1#SetAVTransportURI\&quot;&quot;;
+        strPostData = &quot;&lt;?xml version=\&quot;1.0\&quot;?&gt;\r\n\
+&lt;s:Envelope xmlns:s=\&quot;http://schemas.xmlsoap.org/soap/envelope/\&quot; s:encodingStyle=\&quot;http://schemas.xmlsoap.org/soap/encoding/\&quot;&gt;\r\n\
+&lt;s:Body&gt;\r\n\
+&lt;u:SetAVTransportURI xmlns:u=\&quot;urn:schemas-upnp-org:service:AVTransport:1\&quot;&gt;\r\n\
+&lt;InstanceID&gt;0&lt;/InstanceID&gt;\r\n\
+&lt;CurrentURI&gt;http://192.168.1.77:8091/gadameilin.mp3&lt;/CurrentURI&gt;\r\n\
+&lt;/u:SetAVTransportURI&gt;\r\n\
+&lt;/s:Body&gt;\r\n\
+&lt;/s:Envelope&gt;\r\n&quot;;
+        break;
+    }
+
+
+    // Test data
+    CrackedUrl crackedUrl(L&quot;http://192.168.1.77:49152/_urn-schemas-upnp-org-service-AVTransport_control&quot;);
+
+
+    // Open session.
+    hSession = OpenSession(L&quot;Microsoft Internet Explorer&quot;);
+    if (hSession == NULL) {
+        printf(&quot;Error:Open session!\n&quot;);
+        return -1;
+    }
+
+    // Connect.
+    hConnect = Connect(hSession, crackedUrl.GetHostName(), crackedUrl.GetPort());
+    if (hConnect == NULL) {
+        printf(&quot;Error:Connect failed!\n&quot;);
+        return -1;
+    }
+
+    // Open request.
+    hRequest = OpenRequest(hConnect, L&quot;POST&quot;, crackedUrl.GetPath(), crackedUrl.GetScheme());
+    if (hRequest == NULL) {
+        printf(&quot;Error:OpenRequest failed!\n&quot;);
+        return -1;
+    }
+
+    // Add request header.
+    if (!AddRequestHeaders(hRequest, strHeader)) {
+        printf(&quot;Error:AddRequestHeaders failed!\n&quot;);
+        return -1;
+    }
+
+    // Add request header.
+    if (!AddRequestHeaders(hRequest, strHeader2)) {
+        printf(&quot;Error:AddRequestHeaders failed!\n&quot;);
+        return -1;
+    }
+
+    // Send post data.
+    if (!SendRequest(hRequest, (const char*)strPostData, strPostData.GetLength())) {
+        printf(&quot;Error:SendRequest failed!\n&quot;);
+        return -1;
+    }
+
+    // End request
+    if (!EndRequest(hRequest)) {
+        printf(&quot;Error:EndRequest failed!\n&quot;);
+        return -1;
+    }
+
+    char szBuf[BUF_SIZE];
+    DWORD dwSize = 0;
+    szBuf[0] = 0;
+
+    // Query header info.
+#ifdef USE_WINHTTP
+    int contextLengthId = WINHTTP_QUERY_CONTENT_LENGTH;
+    int statusCodeId = WINHTTP_QUERY_STATUS_CODE;
+    int statusTextId = WINHTTP_QUERY_STATUS_TEXT;
+#else
+    int contextLengthId = HTTP_QUERY_CONTENT_LENGTH;
+    int statusCodeId = HTTP_QUERY_STATUS_CODE;
+    int statusTextId = HTTP_QUERY_STATUS_TEXT;
+#endif
+    dwSize = BUF_SIZE;
+    if (QueryInfo(hRequest, contextLengthId, szBuf, &amp;dwSize)) {
+        szBuf[dwSize] = 0;
+        printf(&quot;Content length:[%s]\n&quot;, szBuf);
+    }
+
+    dwSize = BUF_SIZE;
+    if (QueryInfo(hRequest, statusCodeId, szBuf, &amp;dwSize)) {
+        szBuf[dwSize] = 0;
+        printf(&quot;Status code:[%s]\n&quot;, szBuf);
+    }
+
+    dwSize = BUF_SIZE;
+    if (QueryInfo(hRequest, statusTextId, szBuf, &amp;dwSize)) {
+        szBuf[dwSize] = 0;
+        printf(&quot;Status text:[%s]\n&quot;, szBuf);
+    }
+
+    // read data.
+    for (;;) {
+        dwSize = BUF_SIZE;
+        if (ReadData(hRequest, szBuf, dwSize, &amp;dwSize) == FALSE) {
+            break;
+        }
+        if (dwSize &lt;= 0) {
+            break;
+        }
+
+        szBuf[dwSize] = 0;
+        printf(&quot;%s\n&quot;, szBuf);    //Output value = value1 + value2
+    }
+
+    CloseInternetHandle(hRequest);
+    CloseInternetHandle(hConnect);
+    CloseInternetHandle(hSession);
+
+
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<h1 id="样例2"><a href="#样例2" class="headerlink" title="样例2"></a>样例2</h1><pre><code class="cpp">/*
+    标准Windows库，多字节，MTd
+*/
+#include &lt;cstdlib&gt;
+#include &lt;cstdio&gt;
+#include &lt;afx.h&gt;
+#include &lt;WinInet.h&gt;
+#pragma comment(lib,&quot;wininet.lib&quot;)
+
+CStringW GetStringWFromUtf8(const char* str, int strLen)
+{
+    int len = MultiByteToWideChar(CP_UTF8, 0, str, strLen, 0, 0);
+
+    CStringW buf;
+    WCHAR* dd = buf.GetBuffer(len);
+
+    len = MultiByteToWideChar(CP_UTF8, 0, str, strLen, dd, len);
+
+    buf.ReleaseBuffer(len);
+
+    return buf;
+}
+
+
+BOOL DownLoadUrl(CString szUrl)
+{
+    HINTERNET hInet = NULL;
+    HINTERNET hConnect = NULL;
+    //HINTERNET hRequestHead = NULL;
+    HINTERNET hRequestGet = NULL;
+    //HANDLE hFileWrite = NULL;
+    //char* pBuf = NULL;
+    CFile cFile;
+    if (!cFile.Open(_T(&quot;./device.xml&quot;), CFile::modeCreate | CFile::modeWrite))
+    {
+        printf(&quot;CFile.Open() err\n&quot;);
+    }
+    /*
+    解析网址
+    */
+
+    TCHAR sHostName[128];
+    TCHAR sURLPath[256];
+    URL_COMPONENTS crackedURL = { 0 };
+    crackedURL.dwStructSize = sizeof(URL_COMPONENTS);
+    crackedURL.lpszHostName = sHostName;
+    crackedURL.dwHostNameLength = ARRAYSIZE(sHostName);
+    crackedURL.lpszUrlPath = sURLPath;
+    crackedURL.dwUrlPathLength = ARRAYSIZE(sURLPath);
+    InternetCrackUrl(szUrl, (DWORD)_tcslen(szUrl), 0, &amp;crackedURL);
+
+
+    //LPCSTR lpszAgent = _T(&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/77.0.3865.120&quot;);
+    LPCSTR lpszAgent = _T(&quot;Microsoft Internet Explorer&quot;);
+    hInet = InternetOpen(lpszAgent, INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+    if (NULL == hInet)
+    {
+        printf(&quot;-1&quot;);
+        return FALSE;
+    }
+    hConnect = InternetConnect(hInet, crackedURL.lpszHostName, crackedURL.nPort, NULL, NULL, INTERNET_SERVICE_HTTP, 0, 0);
+    if (NULL == hConnect)
+    {
+        InternetCloseHandle(hInet);
+        printf(&quot;-2&quot;);
+        return FALSE;
+    }
+    hRequestGet = HttpOpenRequest(hConnect, _T(&quot;GET&quot;), crackedURL.lpszUrlPath, _T(&quot;HTTP/1.1&quot;), _T(&quot;&quot;), NULL, 0, 0);
+    if (NULL == hRequestGet)
+    {
+        InternetCloseHandle(hConnect);
+        InternetCloseHandle(hInet);
+        printf(&quot;-3&quot;);
+        return FALSE;
+    }
+
+    //查询http状态码（这一步非必须），但是HttpSendRequest()必须要调用
+    DWORD dwRetCode = 0;
+    DWORD dwSizeOfRq = sizeof(DWORD);
+    if (!HttpSendRequest(hRequestGet, NULL, 0, NULL, 0) || !HttpQueryInfo(hRequestGet, HTTP_QUERY_STATUS_CODE | HTTP_QUERY_FLAG_NUMBER, &amp;dwRetCode, &amp;dwSizeOfRq, NULL) || dwRetCode &gt;= 400)
+    {
+        InternetCloseHandle(hRequestGet);
+        InternetCloseHandle(hConnect);
+        InternetCloseHandle(hInet);
+        printf(&quot;-4&quot;);
+        return FALSE;
+    }
+
+
+    //查询文件大小
+    DWORD dwContLen = 0;
+    /*
+    窄字符解决方案
+    */
+    if (!InternetQueryDataAvailable(hRequestGet, &amp;dwContLen, 0, 0) || dwContLen == 0)
+    {
+        InternetCloseHandle(hRequestGet);
+        InternetCloseHandle(hConnect);
+        InternetCloseHandle(hInet);
+        printf(&quot;dwContLen = 0&quot;);
+    }
+    /*
+    宽字符解决方案
+    WCHAR buf[64] = { 0 };
+    dwSizeOfRq = sizeof(buf);
+
+    //需要注意的是，如果适用HttpQueryInfoW,那么buf必须也是宽字符版本，
+    //虽然HttpQueryInfo()之前只是一个缓冲区，因为如果不使用宽字符，buf得到的字节数可能会因为\0的原因被截断。
+    //if (HttpQueryInfo(hRequestGet, HTTP_QUERY_CONTENT_LENGTH | HTTP_QUERY_FLAG_NUMBER64, buf, &amp;dwSizeOfRq, NULL))
+    //if (HttpQueryInfo(hRequestGet, HTTP_QUERY_CONTENT_LENGTH | HTTP_QUERY_FLAG_NUMBER, buf, &amp;dwSizeOfRq, NULL))
+    if (HttpQueryInfo(hRequestGet, HTTP_QUERY_CONTENT_LENGTH, buf, &amp;dwSizeOfRq, NULL))
+    {
+        //dwContLen = _wtol(buf);
+        wchar_t* pEnd;
+        dwContLen = wcstol(buf, &amp;pEnd, 10);
+
+        //dwContLen = *(int*)&amp;buf
+    }
+    else
+    {
+        printf(&quot;-5&quot;);
+        return FALSE;
+    }
+    */
+
+
+    DWORD dwError;
+    DWORD dwBytesRead;
+    DWORD nCurrentBytes = 0;
+    char sBufRecv[1024] = { 0 };
+    CString szContent;
+    while (true)
+    {
+        //开始读取文件
+        ZeroMemory(sBufRecv, sizeof(sBufRecv));
+        if (InternetReadFile(hRequestGet, sBufRecv, sizeof(sBufRecv), &amp;dwBytesRead))
+        {
+            if (0 == dwBytesRead)
+            {
+                printf(&quot;\ndwBytesRead = 0&quot;);
+                break;
+            }
+
+            nCurrentBytes += dwBytesRead;
+            szContent += GetStringWFromUtf8(sBufRecv,dwBytesRead);
+
+            //写入文件
+            cFile.SeekToEnd();
+            cFile.Write(sBufRecv, dwBytesRead);
+            //fwrite(sBufRecv, 1, dwBytesRead, file);
+        }
+        else
+        {
+            dwError = GetLastError();
+            break;
+        }
+    }
+    //fclose(file);
+    cFile.Close();
+    InternetCloseHandle(hRequestGet);
+    InternetCloseHandle(hConnect);
+    InternetCloseHandle(hInet);
+
+    //if (dwContLen != nCurrentBytes)
+    //{
+    //    //数据有误
+    //    printf(&quot;-6&quot;);
+    //    return FALSE;
+    //}
+    printf(&quot;%s\n&quot;, szContent.GetString());
+    printf(&quot;\nnCurrentBytes = %d\nnCountLen = %d\n&quot;, nCurrentBytes, dwContLen);
+    return TRUE;
+}
+
+
+int main()
+{
+    CString szUrl = _T(&quot;http://192.168.1.77:49152/TxMediaRenderer_desc.xml&quot;);
+    //CString szUrl = _T(&quot;http://192.168.1.9:49152/description.xml&quot;);
+    DownLoadUrl(szUrl);
+
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/23/c++11/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  c++11
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/23/socket/">
+                socket
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Been Stone</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

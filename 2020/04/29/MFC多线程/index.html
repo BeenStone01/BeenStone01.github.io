@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		MFC多线程 | 
+	 
+	Been&#39;s Blog
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="my markdown blog" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">Been's Blog</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/BeenStone01" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/C++%E4%BB%A3%E7%A0%81%E6%A0%B7%E4%BE%8B/">
+										C++代码样例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/19/GPIB/">
+										GPIB
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Laravel/">
+										Laravel
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/Linux%E5%9C%A8%E7%BA%BF/">
+										Linux在线
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/29/MFC/">
+										MFC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/04/29/MFC%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+										MFC多线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%8C%89%E9%92%AE/">
+										MFC自绘按钮
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/MFC%E8%87%AA%E7%BB%98%E6%A6%82%E8%BF%B0/">
+										MFC自绘概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/SSDP%E5%BC%80%E5%8F%91%E8%AF%B4%E6%98%8E/">
+										SSDP开发说明
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL_vector/">
+										STL_vector
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/STL/">
+										STL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinHttp%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinHttp使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/WinInet%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/">
+										WinInet使用详解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/Wininte%E6%A0%B7%E4%BE%8B%E8%A7%A3%E6%9E%90/">
+										Wininte样例解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/XML%E4%B9%8BIXMLHTTPReuest/">
+										XML之IXMLHTTPReuest
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E6%93%8D%E4%BD%9C%E4%B9%8BCMarkUp/">
+										XML操作之CMarkUp
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/XML%E8%A7%A3%E6%9E%90/">
+										XML解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/c++11/">
+										c++11
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/07/06/c++%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+										c++小程序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/26/c-%E6%9C%AA%E5%BD%92%E7%B1%BB%E4%BB%A3%E7%A0%81/">
+										c-未归类代码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/hexo/">
+										hexo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/socket/">
+										socket
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/thread-2/">
+										thread-2
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/thread/">
+										thread
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/vue%E7%AC%94%E8%AE%B0/">
+										vue笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/webpack%E4%BD%BF%E7%94%A8/">
+										webpack使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/30/%E4%B8%B2%E5%8F%A3com%E7%BC%96%E7%A8%8B/">
+										串口com编程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/05/03/%E5%88%B7%E9%A2%98%E7%BA%AA%E5%BD%95/">
+										刷题纪录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B/">
+										字符类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
+										小程序开发笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%91%BD%E4%BB%A4/">
+										常用工具命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/">
+										文件读写
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/23/%E7%BC%96%E7%A0%81%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/">
+										编码格式转换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	MFC多线程
+</h1>
+<div class="article-meta">
+	
+	<span>Been Stone</span>
+	<span>2020-04-29 18:34:25</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="Win32-多线程"><a href="#Win32-多线程" class="headerlink" title="Win32 多线程"></a><a href="https://blog.csdn.net/qq61394323/article/details/9328301" target="_blank" rel="noopener">Win32 多线程</a></h1><pre><code class="cpp">HANDLE CreateThread(
+    LPSECURITY_ATTRIBUTES lpThreadAttributes,    //线程属性
+    DWORD dwStackSize,                            //栈空间大小
+    LPTHREAD_START_ROUTINE lpStartAddress,        //线程执行函数地址
+    LPVOID lpParameter,                            //传递参数
+    DWORD dwCreationFlags,                        //标志，可以选择挂起
+    LPDWORD lpThreadId                            //线程ID
+    );</code></pre>
+<p>示例</p>
+<pre><code class="cpp">DWORD WINAPI ThreadProc(LPVOID lpParameter)
+{
+    int a = (int)lpParameter;
+    CString str;
+    str.Format(_T(&quot;%d&quot;),a);
+    AfxMessageBox(str);
+    return 0;
+}
+
+void CSegDlg::OnBnClickedstop()
+{
+    DWORD dwThreadId = 0;
+    HANDLE hThread = CreateThread(NULL,0,ThreadProc,(LPVOID)123,0,&amp;dwThreadId);
+    CloseHandle(hThread);
+}</code></pre>
+<h1 id="MFC多线程"><a href="#MFC多线程" class="headerlink" title="MFC多线程"></a><a href="https://www.cnblogs.com/HappyXie/archive/2011/03/03/1970002.html" target="_blank" rel="noopener">MFC多线程</a></h1><p>MFC中有两类线程，分别称之为工作者线程和用户界面线程。二者的主要区别在于工作者线程没有消息循环，而用户界面线程有自己的消息队列和消息循环。</p>
+<p>工作者线程没有消息机制，通常用来执行后台计算和维护任务，如冗长的计算过程，打印机的后台打印等。用户界面线程一般用于处理独立于其他线程执行之外的用户输入，响应用户及系统所产生的事件和消息等。但对于Win32的API编程而言，这两种线程是没有区别的，它们都只需线程的启动地址即可启动线程来执行任务。</p>
+<p>在MFC中，一般用全局函数AfxBeginThread()来创建并初始化一个线程的运行，该函数有两种重载形式，分别用于创建工作者线程和用户界面线程。两种重载函数原型和参数分别说明如下：</p>
+<h2 id="一、工作者线程"><a href="#一、工作者线程" class="headerlink" title="一、工作者线程"></a>一、工作者线程</h2><ol>
+<li><a href="https://docs.microsoft.com/zh-cn/cpp/mfc/reference/application-information-and-management?view=vs-2017#afxbeginthread" target="_blank" rel="noopener">AfxBeginThread</a></li>
+</ol>
+<pre><code class="cpp">CWinThread* AfxBeginThread(
+    AFX_THREADPROC pfnThreadProc,
+    LPVOID pParam,
+    nPriority = THREAD_PRIORITY_NORMAL,
+    UINT nStackSize = 0,
+    DWORD dwCreateFlags = 0,
+    LPSECURITY_ATTRIBUTES lpSecurityAttrs = NULL
+)</code></pre>
+<p><code>pfnThreadProc</code>:  指向工作者线程的执行函数的指针，线程函数原型必须声明如下：UINT ExecutingFunction(LPVOID pParam);<br>请注意，ExecutingFunction()应返回一个UINT类型的值，用以指明该函数结束的原因。一般情况下，返回0表示执行成功。<br><code>pParam</code>: 传递给线程函数的一个32位参数，执行函数将用某种方式解释该值。它可以是数值，或是指向一个结构体的指针，甚至可以被忽略。<br><code>nPriority</code>: 线程的优先级。如果为0，则线程与其父线程具有相同的优先级。<br><code>nStackSize</code>: 线程为自己分配堆栈的大小，其单位为字节。如果nStackSize被设为0，则线程的堆栈被设置成与父线程相同大小。<br><code>dwCreateFlags</code>: 如果为0，则线程在创建后立刻开始执行。如果为CREATE_SUSPEND，则线程在创建后被挂起；<br><code>lpSecurityAttrs</code>: 线程的安全属性指针，一般为NULL。</p>
+<pre><code class="cpp">UINT _cedcl ThreadProc(LPVOID lpParam)
+{
+    int a = (int)lpParam;
+    CString str;
+    str.Format(_T(&quot;%d&quot;),a);
+    AfxMessageBox(str);
+    return 0;
+}
+
+void CSegDlg::OnBnclickedstop()
+{
+    CWinThread* pThread = AfxBeginThread(ThreadProc,(LPVOID)456);
+}
+</code></pre>
+<h3 id="子线程使用主线程参数"><a href="#子线程使用主线程参数" class="headerlink" title="子线程使用主线程参数"></a><a href="https://www.cnblogs.com/sclu/p/11635082.html" target="_blank" rel="noopener">子线程使用主线程参数</a></h3><ol>
+<li>子线程对应于普通函数，不能被简单的声明成主对话框类的成员函数，因此不能使用主对话框(主线程)的参数，需要在创建线程时，将主对话框类对象的指针传递给子线程。子线程通过指针去访问主线程的变量。</li>
+</ol>
+<pre><code class="cpp">UINT _cdecl ThreadProc(LPVOID lpParameter)
+{
+    CSegDlg* pSegDlg = (CSegDlg *)lpParameter; //转换为主对话框类的指针
+    int a = pSegDlg-&gt;num;
+    CString str;
+    str.Format(_T(&quot;%d&quot;), a);
+    AfxMessageBox(str);
+    return 0;
+}
+void CSegDlg::OnBnClickedstop()
+{
+    num = 100; //成员变量
+    CWinThread *pThread=AfxBeginThread(ThreadProc, this);
+}</code></pre>
+<ol start="2">
+<li>如果一定要将子线程函数声明为类成员函数，需要定义为静态成员函数。</li>
+</ol>
+<pre><code class="cpp">UINT _cdecl CSegDlg::ThreadProc(LPVOID lpParam)    //static函数
+{
+    CSegDlg* pSegDlg = (CSegDlg*)lpParam;        //仍然需要传递对象指针，因为static关键词没有this指针
+    int a = pSegDlg-&gt;num;
+    CString str;
+    str.Format(_T(&quot;%d&quot;),a);
+    AfxMessageBox(str);
+    return 0;
+}
+
+ void CSegDlg::OnBnClickedstop()
+ {
+     num = 100;
+     CWinThread* pThread = AfxBeginThread(ThreadProc,this);
+ }</code></pre>
+<p><a href="https://docs.microsoft.com/zh-cn/cpp/parallel/multithreading-creating-worker-threads?view=vs-2017" target="_blank" rel="noopener">MSDN: 在MFC中创建工作线程</a><br><a href="https://www.cnblogs.com/hs-pingfan/p/10513110.html" target="_blank" rel="noopener">MFC多线程技术</a></p>
+<h2 id="二、用户界面线程"><a href="#二、用户界面线程" class="headerlink" title="二、用户界面线程"></a>二、用户界面线程</h2><pre><code class="cpp">CWinThread* AfxBeginThread(
+    CRuntimeClass* pThreadClass,
+    int nPriority = THREAD_PRIORITY_NORMAL,
+    UINT nStackSize = 0,
+    DWORD dwCreateFlags = 0,
+    LPSECURITY_ATTRIBUTES lpSecurityAttrs = NULL
+    )</code></pre>
+<p>pThreadClass 是指向CWinThread的一个导出类的运行时类对象的指针，该导出类定义了被创建的用户界面线程的启动、退出等；其他参数的意义同形式1.使用函数的这个原型生成的线程也有消息机制，此消息机制同主线程的机制几乎一样。</p>
+<p>在工作者线程中使用的函数指针一般是指向全局函数的而不是类成员函数，应为这牵扯到对象的生命周期，如果一个对象在线程执行时被销毁了，那么这个线程的行为就成为不确定的了。</p>
+<h2 id="线程间通讯"><a href="#线程间通讯" class="headerlink" title="线程间通讯"></a>线程间通讯</h2><p>一般而言，应用程序中的一个次要线程总是为主线程执行特定的任务，这样，主线程和次要线程间必定有一个消息传递的渠道，也就是主线程和次要线程间要进行通信。这种线程间的额通信不但是难以避免的，而且在多线程编程中也是复杂和频繁的，</p>
+<ol>
+<li><p>使用全局变量进行通信<br>由于属于同一个进程的各个线程共享操作系统分配该进程的资源，故解决线程间通信最简单的一种方法是使用全局变量。对于标准类型的全局变量，建议使用volatile修饰符，它告诉编译器无需对该变量作任何的优化，即无需把它放到一个寄存器中，并且该值可被外部改变。如果线程间所需传递的消息较复杂，我们可以定义一个结构，通过传递指向该结构的指针进行传递消息。</p>
+</li>
+<li><p>使用自定义消息<br>我们可以在一个线程的执行函数中向另一个线程发送自定义的消息来达到通信的目的。一个线程向另外一个线程发送消息是通过操作系统实现的。利用Windows操作系统的消息驱动机制，当一个线程发出一条消息时，操作系统首先接收到该消息，然后把消息转发给目标线程，接收消息的线程必须已经建立了消息循环。</p>
+</li>
+</ol>
+<p>例如我们想增加一个用户自定义消息WM_USER_THREADEND其方法是：</p>
+<ol>
+<li>在头文件stdafx.h中增加一个自定义消息宏        </li>
+</ol>
+<pre><code class="cpp">#define WM_USER_THREADEND WM_USER + 1</code></pre>
+<ol start="2">
+<li>在于增加新消息的窗口或对话框类的头文件中增加一个回调函数声明，注意要声明为public        </li>
+</ol>
+<pre><code class="cpp">afx_msg LRESULT OnUserThreadend(WPARAM wParam, LPARAM lParam);        </code></pre>
+<ol start="3">
+<li>在窗口或对话框的cpp文件的BEGIN_MESSAGE_MAP, END_MESSAGE_MAP中增加一行        </li>
+</ol>
+<pre><code class="cpp">ON_MESSAGE(WM_USER_THREADEND, OnUserThreadend)</code></pre>
+<ol start="4">
+<li>在窗口或对话框的cpp文件中增加回调函数的实现，如：    </li>
+</ol>
+<pre><code class="cpp">    LRESULT ThreadDialog::OnUserThreadend(WPARAM wParam, LPARAM lParam)
+    {
+        TRACE(&quot;WM_USER_THREADEND message\n&quot;);
+        return 0;
+    }</code></pre>
+<ol start="5">
+<li>自定义消息的触发        </li>
+</ol>
+<pre><code class="cpp">    ::PostMessage(GetSameHwnd(), WM_USER_THREADEND,0,0);</code></pre>
+<p>其中GetSafeHwnd()得到了一个当前窗口的句柄，此消息将发给当前窗口，如果想发送消息给其他窗口只需要改变这个句柄，前提是目的窗口也实现了此消息的处理函数。</p>
+<h1 id="MFC线程同步"><a href="#MFC线程同步" class="headerlink" title="MFC线程同步"></a><a href="https://www.cnblogs.com/yhlboke-1992/p/9315263.html" target="_blank" rel="noopener">MFC线程同步</a></h1><h2 id="线程同步机制："><a href="#线程同步机制：" class="headerlink" title="线程同步机制："></a>线程同步机制：</h2><p> 1). 事件(Event)，用来通知线程有一些事件已发生，从而启动后继任务的开始。<br> 2). 信号量(semaphore)，为控制一个有限数量用户资源而设计<br> 3). 互斥量(mutex)，为协调对一个共享资源的单独访问而设计<br> 4). 临界区(Critical section)，通过对多线程的串行化来访问公共资源或一段代码，速度快，适合控制数据访问</p>
+<h3 id="1-事件对象；"><a href="#1-事件对象；" class="headerlink" title="1. 事件对象；"></a>1. 事件对象；</h3><p>事件对象是指用户在程序中使用内核对象的有无信号状态实现线程的同步<br>临界区被初始化后，当程序进入临界区后便有有临界区的所有权，其余线程<br>CreateEvent()    创建并返回事件对象；<br>SetEvent()    将指定的事件设置为有信号状态（有信号状态下其余线程可以访问）；<br>ResetEvent()    将指定的事件设置为无信号状态；<br>除SetEvent函数外，WaitForSingleObject函数等待指定事件。<br>==注意：== 上述是Windows API函数，CEvent类是MFC实现事件对象的类，事件对象为利基访问，一旦事件对象被设置为有信号，立即会被其余线程访问！能实现实时监听。</p>
+<pre><code class="cpp">#include&lt;windows.h&gt;
+#include&lt;iostream&gt;
+using namespace std;
+
+int number = 1; //定义全局变量
+HANDLE hEvent;  //定义事件句柄
+
+unsigned long __stdcall ThreadProc1(void* lp)
+{
+    while (number &lt; 100)
+    {
+        WaitForSingleObject(hEvent, INFINITE);  //等待对象为有信号状态
+        cout &lt;&lt; &quot;thread 1 :&quot; &lt;&lt; number &lt;&lt; endl;
+        ++number;
+        Sleep(100);
+        SetEvent(hEvent);
+    }
+
+    return 0;
+}
+
+unsigned long __stdcall ThreadProc2(void* lp)
+{
+    while (number &lt; 100)
+    {
+        WaitForSingleObject(hEvent, INFINITE);  //等待对象为有信号状态
+        cout &lt;&lt; &quot;thread 2 :&quot; &lt;&lt; number &lt;&lt; endl;
+        ++number;
+        Sleep(100);
+        SetEvent(hEvent);
+    }
+
+    return 0;
+}
+
+int main()
+{
+    CreateThread(NULL, 0, ThreadProc1, NULL, 0, NULL);
+    CreateThread(NULL, 0, ThreadProc2, NULL, 0, NULL);
+    hEvent = CreateEvent(NULL, FALSE, TRUE, &quot;event&quot;);
+
+    Sleep(10 * 1000);
+
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<h3 id="2-信号量"><a href="#2-信号量" class="headerlink" title="2. 信号量"></a>2. 信号量</h3><p>大于0，表示信号量处于触发；<br>等于0，资源已经耗尽，故信号量处于未触发；在对信号量调用资源计数时，等待函数会检查信号量的当前资源计数，如果大于0，减1后返回让调用线程继续执行。一个线程可以多次调用等待函数来减小信号量。</p>
+<pre><code class="cpp">HANDLE CreateSemaphre(                //创建信号对象
+    LPSECURITY_ATTRIBUTES lpSemaphoreAttributes,     //安全属性，（通常为NULL）
+    LONG lInitialCount,                                //初始资源数量，资源中一开始有多少可供使用
+    LONG lMaximumCount,                                //最大并发数量，应用程序能够处理的最大资源数
+    LPCTSTR lpName);                                //信号量对象命名，NULL表示匿名
+
+HANDLE OpenSemaphore(            //打开信号量，通过信号量名获得信号量对象句柄；
+    DWORD dwDesireAccess,                //访问权限,（通常为SEMAPHORE_ALL_ACCESS)
+    BOOL bInheritHandle,                //信号量句柄继承性，（通常TRUE)
+    LPCTSTR lpName);                    //不同进程中的各线程可以通过名称来确保它们访问同一个信号量。
+
+BOOL WINAPI ReleaseSemaphore(    //释放信号量，（递增信号量的当前资源计数）
+    HANDLE hSemaphore,                    //信号量句柄
+    LONG lReleaseCount,                    //表示增加个数，    0 &lt; x &lt; max
+    LPLONG lpPreviousCount);            //先前资源计数，设为NULL表示不需要传出。（通常为NULL)
+
+HANDLE WINAPI CreateSemaphoreExW(
+    LPSECURITY_ATTRIBUTES lpSemaphoreAttributes,
+    LONG lInitialCount,
+    LONG lMaximumCount,
+    LPCWSTR lpName,
+    DWORD dwFlags,
+    DWORD dwDesiredAccess);</code></pre>
+<p>信号量的特点和用途如下<br>(1). 如果当前资源的数量大于0，则信号量有效；<br>(2). 如果当前资源数量是0，则信号量无效；<br>(3). 系统绝不允许当前资源的数量为负值；<br>(4). 当前资源数量绝不能大于最大资源数量。</p>
+<p>示例1，两个线程交替输出数字</p>
+<pre><code class="cpp">#include&lt;windows.h&gt;
+#include&lt;iostream&gt;
+using namespace std;
+
+int number = 1; //定义全局变量
+HANDLE hSemaphore;  //定义信号量句柄
+
+unsigned long __stdcall ThreadProc1(void* lp)
+{
+    long count;
+    while (number &lt; 100)
+    {
+        WaitForSingleObject(hSemaphore, INFINITE);  //等待信号量为有信号状态，大于0时，减1后返回
+        cout &lt;&lt; &quot;thread 1 :&quot; &lt;&lt; number &lt;&lt; endl;
+        ++number;
+        Sleep(100);
+        ReleaseSemaphore(hSemaphore, 1, &amp;count);    //资源计数+1
+    }
+
+    return 0;
+}
+
+unsigned long __stdcall ThreadProc2(void* lp)
+{
+    long count;
+    while (number &lt; 100)
+    {
+        WaitForSingleObject(hSemaphore, INFINITE);  //等待信号量为有信号状态
+        cout &lt;&lt; &quot;thread 2 :&quot; &lt;&lt; number &lt;&lt; endl;
+        ++number;
+        Sleep(100);
+        ReleaseSemaphore(hSemaphore, 1, &amp;count);
+    }
+
+    return 0;
+}
+
+int main()
+{
+    hSemaphore = CreateSemaphore(NULL, 1, 100, &quot;sema&quot;);
+
+    CreateThread(NULL, 0, ThreadProc1, NULL, 0, NULL);
+    CreateThread(NULL, 0, ThreadProc2, NULL, 0, NULL);
+
+    Sleep(10 * 1000);
+
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+<p>示例2：</p>
+<pre><code class="cpp">#include &lt;stdio.h&gt;
+#include &lt;process.h&gt;
+#include &lt;windows.h&gt;
+long g_nNum;
+unsigned int __stdcall Fun(void *pPM);
+const int THREAD_NUM = 10;
+//信号量与关键段
+HANDLE            g_hThreadParameter;
+CRITICAL_SECTION  g_csThreadCode;
+int main()
+{
+    printf(&quot;     经典线程同步 信号量Semaphore\n&quot;);
+    printf(&quot; -- by MoreWindows( http://blog.csdn.net/MoreWindows ) --\n\n&quot;);
+
+    //初始化信号量和关键段
+    g_hThreadParameter = CreateSemaphore(NULL, 0, 1, NULL);//当前0个资源，最大允许1个同时访问
+    InitializeCriticalSection(&amp;g_csThreadCode);
+
+    HANDLE  handle[THREAD_NUM];
+    g_nNum = 0;
+    int i = 0;
+    while (i &lt; THREAD_NUM)
+    {
+        handle[i] = (HANDLE)_beginthreadex(NULL, 0, Fun, &amp;i, 0, NULL);
+        WaitForSingleObject(g_hThreadParameter, INFINITE);//等待信号量&gt;0
+        ++i;
+    }
+    WaitForMultipleObjects(THREAD_NUM, handle, TRUE, INFINITE);
+
+    //销毁信号量和关键段
+    DeleteCriticalSection(&amp;g_csThreadCode);
+    CloseHandle(g_hThreadParameter);
+    for (i = 0; i &lt; THREAD_NUM; i++)
+        CloseHandle(handle[i]);
+
+    system(&quot;pause&quot;);
+    return 0;
+}
+unsigned int __stdcall Fun(void *pPM)
+{
+    int nThreadNum = *(int *)pPM;
+    ReleaseSemaphore(g_hThreadParameter, 1, NULL);//信号量++
+    Sleep(50);//some work should to do
+    EnterCriticalSection(&amp;g_csThreadCode);
+    ++g_nNum;
+    Sleep(0);//some work should to do
+    printf(&quot;线程编号为%d  全局资源值为%d\n&quot;, nThreadNum, g_nNum);
+    LeaveCriticalSection(&amp;g_csThreadCode);
+    return 0;
+}</code></pre>
+<h3 id="3-互斥量"><a href="#3-互斥量" class="headerlink" title="3. 互斥量"></a>3. 互斥量</h3><p>互斥对象还可以在进程间使用，在实现线程同步时包含一个线程ID和一个计数器，线程ID表示拥有互斥对象的线程，计数器表示该互斥对象被同一线程所使用次数。<br>Creatmutex()    创建并返回互斥对象；<br>Releasemutex()    释放互斥对象句柄；<br>WaitForSingleObject()    对该对象进行请求。<br>==注意：== 上述是Windows API函数，CMutex类是MFC中的互斥对象类，互斥对象为立即访问，一旦互斥对象被释放 立即会被其他正在等待的线程访问！能实现实时监听</p>
+<pre><code class="cpp">#include &lt;windows.h&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+DWORD WINAPI Fun1Proc(LPVOID lpParameter);    //thread data
+DWORD WINAPI Fun2Proc(LPVOID lpParameter); //thread data
+
+int index = 0;
+int tickets = 100;
+HANDLE hMutex;
+
+int main()
+{
+    HANDLE hThread1;
+    HANDLE hThread2;
+
+
+    // 仅允许有一个实列运行 创建互斥
+    hMutex = CreateMutex(NULL, FALSE, &quot;tickets&quot;);
+    if (hMutex) {
+        DWORD dw = GetLastError();
+        if (ERROR_ALREADY_EXISTS == dw) {
+            cout &lt;&lt; &quot;only one instance can run!!&quot; &lt;&lt; endl;
+            return 0;
+        }
+    }
+
+    // 创建线程
+    hThread1 = CreateThread(NULL, 0, Fun1Proc, NULL, 0, NULL);
+    hThread2 = CreateThread(NULL, 0, Fun2Proc, NULL, 0, NULL);
+    CloseHandle(hThread1);
+    CloseHandle(hThread2);
+
+    // 创建互斥对像
+    //hMutex = CreateMutex(NULL,TRUE,NULL);
+    //WaitForSingleObject(hMutex,INFINITE);
+    //ReleaseMutex(hMutex);
+    //ReleaseMutex(hMutex);
+
+    Sleep(4000);
+    system(&quot;pause&quot;);
+}
+
+//线程1入口
+DWORD WINAPI Fun1Proc(LPVOID lpParameter) {
+    //  WaitForSingleObject(hMutex,INFINITE);
+    //  cout&lt;&lt;&quot;thread 1 run&quot;&lt;&lt;endl;
+    //  return 0;
+        //WaitForSingleObject(hMutex, INFINITE);
+    while (TRUE) {
+        // 无限等待
+        WaitForSingleObject(hMutex, INFINITE);
+        if (tickets &gt; 0) {
+            //Sleep(20);
+            cout &lt;&lt; &quot;thread1 sell ticket:&quot; &lt;&lt; tickets-- &lt;&lt; endl;
+        }
+        else {
+            break;
+        }
+        // 释放对像
+        ReleaseMutex(hMutex);
+    }
+    //ReleaseMutex(hMutex);
+    return 0;
+}
+
+//线程2入口
+DWORD WINAPI Fun2Proc(LPVOID lpParameter) {
+    //  WaitForSingleObject(hMutex,INFINITE);
+    //  cout&lt;&lt;&quot;thread 2 run&quot;&lt;&lt;endl;
+    //  return 0;
+    while (TRUE) {
+        WaitForSingleObject(hMutex, INFINITE);
+        if (tickets &gt; 0) {
+            //Sleep(40);
+            cout &lt;&lt; &quot;thread2 sell ticket:&quot; &lt;&lt; tickets-- &lt;&lt; endl;
+        }
+        else {
+            break;
+        }
+        ReleaseMutex(hMutex);
+    }
+
+    return 0;
+}</code></pre>
+<h3 id="4-临界区对象"><a href="#4-临界区对象" class="headerlink" title="4. 临界区对象"></a>4. 临界区对象</h3><p>使用临界区对象实现多线程同步<br>临界区被初始化后，当程序进入临界区后便拥有临界区的所有权，其余线程无权进入只能等对方释放临界区之后，方可进入临界区拥有其所有权再对临界区进行操作<br>InitializeCtrticalSection()    初始化临界区；<br>EnterCriticalSection()    进入临界区；<br>LeaveCriticalSection()    释放临界区所有权并离开临界区；<br>==注意：== 上述是Windows API中相关函数，CCriticalSection类是MFC中定义的临界区类，需要在MFC程序中使用。可以操作临界区，lock锁定临界区，unlock释放临界区。<br>临界区为依次访问，不能实现其中一个线程一释放临界区就会被另一个线程访问临界区，不能实现实时监听。</p>
+<pre><code class="cpp">#include&lt;windows.h&gt;
+#include&lt;iostream&gt;
+using namespace std;
+
+int number = 1; //定义全局变量
+CRITICAL_SECTION Critical;      //定义临界区句柄
+
+unsigned long __stdcall ThreadProc1(void* lp)
+{
+    while (number &lt; 100)
+    {
+        EnterCriticalSection(&amp;Critical);
+        cout &lt;&lt; &quot;thread 1 :&quot; &lt;&lt; number &lt;&lt; endl;
+        ++number;
+        Sleep(100);
+        LeaveCriticalSection(&amp;Critical);
+    }
+
+    return 0;
+}
+
+unsigned long __stdcall ThreadProc2(void* lp)
+{
+    while (number &lt; 100)
+    {
+        EnterCriticalSection(&amp;Critical);
+        cout &lt;&lt; &quot;thread 2 :&quot; &lt;&lt; number &lt;&lt; endl;
+        ++number;
+        Sleep(100);
+        LeaveCriticalSection(&amp;Critical);
+    }
+
+    return 0;
+}
+
+int main()
+{
+    InitializeCriticalSection(&amp;Critical);   //初始化临界区对象
+
+    CreateThread(NULL, 0, ThreadProc1, NULL, 0, NULL);
+    CreateThread(NULL, 0, ThreadProc2, NULL, 0, NULL);
+
+    Sleep(10 * 1000);
+
+    system(&quot;pause&quot;);
+    return 0;
+}</code></pre>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/30/%E4%B8%B2%E5%8F%A3com%E7%BC%96%E7%A8%8B/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  串口com编程
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/29/MFC/">
+                MFC
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Been Stone</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
